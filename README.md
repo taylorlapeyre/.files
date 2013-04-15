@@ -20,7 +20,7 @@ Tools that I install and use through my terminal.
 
 ## Services
 
-Tools that I use through *the internet*.
+Tools that I use through the internet.
 
 #### [Pinboard](https://pinboard.in/u:taylorlapeyre)
 
