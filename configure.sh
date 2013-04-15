@@ -1,5 +1,9 @@
 #!/bin/bash
 
+cd ~/home/.config
+git checkout master
+git pull -u origin master
+
 mkdir ~/.oldconfigs
 
 if [ -f ~/.bash_profile ]; then
