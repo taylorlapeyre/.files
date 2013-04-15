@@ -1,7 +1,7 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ $DIR == "$HOME/home/.config" ]; then
+if [ "$DIR" == "$HOME/home/.config" ]; then
   cd $HOME/home/.config
   git checkout master
   git pull -u origin master

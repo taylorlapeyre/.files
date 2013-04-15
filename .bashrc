@@ -1,5 +1,8 @@
-PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/taylorlapeyre/home/bin
-eval "$(rbenv init -)"
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$HOME/home/bin
+
+if [ -d $HOME/.rbenv ]; then
+  eval "$(rbenv init -)"
+fi
 
 export TERM='xterm-color'
 alias ls='ls -G'
@@ -11,9 +14,6 @@ export GREP_OPTIONS="--color"
 
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
-
-source "`brew --prefix`/etc/grc.bashrc"
-source '/usr/local/Cellar/git/1.8.0.2/etc/bash_completion.d/git-completion.bash'
 
 PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
 
