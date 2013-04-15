@@ -5,8 +5,6 @@
 [user]
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
-[push]
-	default = simple
 [alias]
 	switch = !legit switch \"$@\"
 	branches = !legit branches
