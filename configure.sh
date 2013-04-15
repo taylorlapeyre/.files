@@ -49,9 +49,9 @@ fi
 cp -r ~/home/.config/.ssh ~/.ssh
 echo
 
+if [ ! vagrant]; then echo "[Problem] vagrant is not installed."; fi
 if [ ! git ]; then echo "[Problem] git is not installed."; fi
 if [ ! wget ]; then echo "[Problem] wget is not installed."; fi
-if [ ! rbenv ]; then echo "[Problem] rbenv is not installed."; fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
   if [ ! brew ]; then echo "[Problem] brew is not installed."; fi
 fi
