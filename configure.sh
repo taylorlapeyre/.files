@@ -1,7 +1,8 @@
 #!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ -d ~/home ]; then
-  cd ~/home/.config
+if [ $DIR == "$HOME/home/.config" ]; then
+  cd $HOME/home/.config
   git checkout master
   git pull -u origin master
 fi
@@ -18,21 +19,21 @@ else
     mv ~/.bashrc ~/.oldconfigs/.bashrc
   fi
 fi
-ln ~/home/.config/.bashrc ~/.bashrc
+ln $DIR/.bashrc ~/.bashrc
 echo
 
 if [ -f ~/.gitconfig ]; then
   echo "gitconfig exists. Moving old gitconfig to ~/.oldconfigs.."
   mv ~/.gitconfig ~/.oldconfigs/.gitconfig
 fi
-ln ~/home/.config/.gitconfig ~/.gitconfig
+ln $DIR/.gitconfig ~/.gitconfig
 echo
 
 if [ -f ~/.vimrc ]; then
   echo "vimrc exists. Moving old vimrc to ~/.oldconfigs.."
   mv ~/.vimrc ~/.oldconfigs/.vimrc
 fi
-ln ~/home/.config/.vimrc ~/.vimrc
+ln $DIR/.vimrc ~/.vimrc
 echo
 
 if [ -d ~/.vim ]; then
@@ -40,20 +41,5 @@ if [ -d ~/.vim ]; then
   if [ -d ~/.oldconfigs/.vim ]; then rm -rf ~/.oldconfigs/.vim; fi
   mv ~/.vim ~/.oldconfigs/.vim
 fi
-cp -r ~/home/.config/.vim ~/.vim
+cp -r $DIR/.vim ~/.vim
 echo
-
-if [ -d ~/.ssh ]; then
-  echo ".ssh/ exists. Moving old .ssh/ to ~/.oldconfigs.."
-  if [ -d ~/.oldconfigs/.ssh ]; then rm -rf ~/.oldconfigs/.ssh; fi
-  mv ~/.ssh ~/.oldconfigs/.ssh
-fi
-cp -r ~/home/.config/.ssh ~/.ssh
-echo
-
-if [ ! vagrant]; then echo "[Problem] vagrant is not installed."; fi
-if [ ! git ]; then echo "[Problem] git is not installed."; fi
-if [ ! wget ]; then echo "[Problem] wget is not installed."; fi
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  if [ ! brew ]; then echo "[Problem] brew is not installed."; fi
-fi
