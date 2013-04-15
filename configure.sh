@@ -7,7 +7,7 @@ if [ "$DIR" == "$HOME/home/.config" ]; then
   git pull -u origin master
 fi
 
-if [! -d ~/.oldconfigs ]; then
+if [ ! -d ~/.oldconfigs ]; then
   mkdir ~/.oldconfigs
 fi
 
