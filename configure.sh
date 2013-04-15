@@ -1,8 +1,10 @@
 #!/bin/bash
 
-cd ~/home/.config
-git checkout master
-git pull -u origin master
+if [ -d ~/home ]; then
+  cd ~/home/.config
+  git checkout master
+  git pull -u origin master
+fi
 
 mkdir ~/.oldconfigs
 
