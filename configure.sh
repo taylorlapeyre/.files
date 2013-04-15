@@ -7,7 +7,9 @@ if [ "$DIR" == "$HOME/home/.config" ]; then
   git pull -u origin master
 fi
 
-mkdir ~/.oldconfigs
+if [! -d ~/.oldconfigs ]; then
+  mkdir ~/.oldconfigs
+fi
 
 if [ -f ~/.bash_profile ]; then
   echo "bash_profile exists. Moving old bash_profile to ~/.oldconfigs.."
