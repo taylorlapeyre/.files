@@ -1,8 +1,6 @@
 ## Applications
 
-Tools that I install and use through the *user interface*.
-
-#### [Dropbox](https://www.dropbox.com)
+Tools that I install and use through the user interface.
 
 #### [Sublime Text](http://www.sublimetext.com)
 
@@ -13,13 +11,11 @@ Tools that I install and use through the *user interface*.
 
 ## Utilities
 
-Tools that I install and use through *my terminal*.
-
-#### [vagrant](https://github.com/mitchellh/vagrant)
-
-#### [heroku-toolbelt](https://toolbelt.heroku.com/)
+Tools that I install and use through my terminal.
 
 #### [git](https://github.com/git/git)
+
+#### [vagrant](https://github.com/mitchellh/vagrant)
 
 
 ## Services
@@ -30,12 +26,12 @@ Tools that I use through *the internet*.
 
 #### [Newsblur](http://newsblur.com)
 
-#### [Digital Ocean](https://www.digitalocean.com/)
+#### [Linode](http://www.linode.com/)
 
 #### [Heroku](http://heroku.com)
 
 ## Other
 
-#### Terminal Theme: [GRB256](https://github.com/garybernhardt/destroy-all-software-extras/tree/master/das-0030-some-vim-tips)
+#### Terminal Color Scheme: [GRB256](https://github.com/garybernhardt/destroy-all-software-extras/tree/master/das-0030-some-vim-tips)
 
 #### Font: [Pragmata Pro](http://www.fsd.it/fonts/pragmatapro.htm)
