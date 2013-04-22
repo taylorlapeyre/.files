@@ -8,7 +8,7 @@ export TERM='xterm-color'
 alias ls='ls -G'
 alias ll='ls -lG'
 alias subl='open -a "Sublime Text 2"'
-alias home='cd ~/home'
+alias home='~/home'
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 
