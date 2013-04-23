@@ -21,21 +21,21 @@ else
     mv ~/.bashrc ~/.oldconfigs/.bashrc
   fi
 fi
-ln $DIR/.bashrc ~/.bashrc
+ln -fF $DIR/.bashrc ~/.bashrc
 echo
 
 if [ -f ~/.gitconfig ]; then
   echo "gitconfig exists. Moving old gitconfig to ~/.oldconfigs.."
   mv ~/.gitconfig ~/.oldconfigs/.gitconfig
 fi
-ln $DIR/.gitconfig ~/.gitconfig
+ln -fF $DIR/.gitconfig ~/.gitconfig
 echo
 
 if [ -f ~/.vimrc ]; then
   echo "vimrc exists. Moving old vimrc to ~/.oldconfigs.."
   mv ~/.vimrc ~/.oldconfigs/.vimrc
 fi
-ln $DIR/.vimrc ~/.vimrc
+ln -fF $DIR/.vimrc ~/.vimrc
 echo
 
 if [ -d ~/.vim ]; then
