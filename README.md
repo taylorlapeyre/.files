@@ -28,7 +28,6 @@ Tools that I use through the internet.
 
 #### [Linode](http://www.linode.com/)
 
-#### [Heroku](http://heroku.com)
 
 ## Other
 
