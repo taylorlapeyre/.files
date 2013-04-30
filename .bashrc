@@ -1,4 +1,4 @@
-PATH=$$HOME/home/bin:${$PATH}
+PATH=$HOME/home/bin:${$PATH}
 PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
 
 # Shell options
