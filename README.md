@@ -1,6 +1,11 @@
+# Taylor's Tools
+
+<br>
+
+
 ## Applications
 
-Tools that I install and use through the user interface.
+Tools with a native user interface.
 
 #### [Sublime Text](http://www.sublimetext.com)
 
@@ -11,11 +16,13 @@ Tools that I install and use through the user interface.
 
 ## Utilities
 
-Tools that I install and use through my terminal.
+Tools that I use through my terminal.
 
 #### [git](https://github.com/git/git)
 
 #### [vagrant](https://github.com/mitchellh/vagrant)
+
+#### [irssi](http://www.irssi.org/)
 
 
 ## Services
