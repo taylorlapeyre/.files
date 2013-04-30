@@ -7,6 +7,10 @@ if [ "$DIR" == "$HOME/home/.config" ]; then
   git pull -u origin master
 fi
 
+if [ ! -d ~/.fonts ]; then
+  mkdir ~/.fonts
+fi
+
 if [ ! -d ~/.oldconfigs ]; then
   mkdir ~/.oldconfigs
 fi
@@ -45,3 +49,6 @@ if [ -d ~/.vim ]; then
 fi
 cp -r $DIR/.vim ~/.vim
 echo
+
+echo "Installing fonts.."
+cp -r $DIR/fonts/* ~/.fonts
