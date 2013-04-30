@@ -14,9 +14,12 @@ fi
 
 # Aliases
 alias ls='ls -G'
-alias ll='ls -lGh'
+alias ll='ls -lhG'
 alias subl='open -a "Sublime Text 2"'
+alias xopen='xdg-open'
 alias home='cd $HOME/home'
+alias fuckin='sudo '
+
 
 # Misc
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
