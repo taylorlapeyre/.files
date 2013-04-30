@@ -38,6 +38,6 @@ Tools that I use through the internet.
 
 ## Other
 
-#### Terminal Color Scheme: [GRB256](https://github.com/garybernhardt/destroy-all-software-extras/tree/master/das-0030-some-vim-tips)
+#### Color Scheme: [Monokai](http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/)
 
 #### Font: [Pragmata Pro](http://www.fsd.it/fonts/pragmatapro.htm)
