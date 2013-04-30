@@ -1,10 +1,10 @@
-if [ $UID -e 0 ]; then
+if [ $UID == 0 ]; then
   token="#"
 else
   token="$"
 fi
 
-PATH=$HOME/home/bin:${$PATH}
+PATH=$HOME/home/bin:$PATH
 PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $token "
 
 # Shell options
