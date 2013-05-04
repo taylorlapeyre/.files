@@ -30,6 +30,7 @@ alias subl='open -a "Sublime Text 2"'
 alias xopen='xdg-open'
 alias home='cd $HOME/home'
 alias fuckin='sudo '
+alias cleanarch='sudo pacman -Rsn $(pacman -Qqdt)'
 
 
 # Misc
