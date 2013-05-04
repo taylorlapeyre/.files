@@ -19,8 +19,13 @@ if [ -d $HOME/.rbenv ]; then
 fi
 
 # Aliases
-alias ls='ls -G'
-alias ll='ls -lhG'
+if [ "$(uname -s)" == "Linux" ]; then
+  alias ls='ls --color=auto'
+  alias ll='ls -lGh --color=auto --group-directories-first'
+else
+  alias ls='ls -G'
+  alias ll='ls -lhG'
+fi
 alias subl='open -a "Sublime Text 2"'
 alias xopen='xdg-open'
 alias home='cd $HOME/home'
