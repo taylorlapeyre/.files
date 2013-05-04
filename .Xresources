@@ -2,9 +2,9 @@ URxvt.scrollBar: false
 ! URxvt.background: [100]#000000
 ! URxvt.foreground: [100]#ddccbb
 URxvt.font: xft:PragmataPro:pixelsize=14
-URxvt.boldFont: xft:PragmataPro-B:pixelsize=14
-URxvt.italicFont: xft:PragmataPro-I:pixelsize=14
-URxvt.boldItalicFont: xft:PragmataPro-Z:pixelsize=14
+URxvt.boldFont: xft:PragmataPro:pixelsize=14:Bold
+URxvt.italicFont: xft:PragmataPro:pixelsize=14:Italic
+URxvt.boldItalicFont: xft:PragmataPro:pixelsize=14:Bold:Italic
 
 ! Xft ----------------
 Xft.autohint:  0
