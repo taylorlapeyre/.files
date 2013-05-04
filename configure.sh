@@ -52,3 +52,17 @@ echo
 
 echo "Installing fonts.."
 cp -r $DIR/fonts/* ~/.fonts
+
+if [ "$(uname -s)" == "Linux" ]; then
+  if [ -f ~/.xinitrc ]; then
+    echo ".xinitrc exists. Moving old .xinitrc to ~/.oldconfigs"
+    mv ~/.xinitrc ~/.oldconfigs/.xinitrc
+  fi
+
+  if [ -f ~/.Xresources ]; then
+    echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
+    mv ~/.Xresources ~/.oldconfigs/.Xresources
+  fi
+  ln -fF $DIR/.xinitrc ~/.xinitrc
+  ln -fF $DIR/.Xresources ~/.Xresources
+fi

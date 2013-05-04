@@ -1,0 +1,5 @@
+URxvt.scrollBar: false
+URxvt.background: [100]#000000
+URxvt.foreground: [100]#ddccbb
+URxvt.font: xft:PragmataPro:pixelsize=14
+Urxvt.xftAntialias: true
