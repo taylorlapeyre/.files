@@ -52,6 +52,7 @@ echo
 
 echo "Installing fonts.."
 cp -r $DIR/fonts/* ~/.fonts
+fc-cache -fv
 
 if [ "$(uname -s)" == "Linux" ]; then
   if [ -f ~/.xinitrc ]; then
