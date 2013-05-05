@@ -36,7 +36,7 @@ Xft.rgba:      rgb
 ! URxvt.color15: #FFFFFF
 
 urxvt*background:       #2E3436
-urxvt*foreground:       #888A85
+urxvt*foreground:       #BFBFBF
 
 !black
 URxvt*color0:      #000000
