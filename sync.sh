@@ -25,21 +25,21 @@ else
     mv ~/.bashrc ~/.oldconfigs/.bashrc
   fi
 fi
-ln -fF $DIR/.bashrc ~/.bashrc
+ln -s -fF $DIR/.bashrc ~/.bashrc
 echo
 
 if [ -f ~/.gitconfig ]; then
   echo "gitconfig exists. Moving old gitconfig to ~/.oldconfigs.."
   mv ~/.gitconfig ~/.oldconfigs/.gitconfig
 fi
-ln -fF $DIR/.gitconfig ~/.gitconfig
+ln -s -fF $DIR/.gitconfig ~/.gitconfig
 echo
 
 if [ -f ~/.vimrc ]; then
   echo "vimrc exists. Moving old vimrc to ~/.oldconfigs.."
   mv ~/.vimrc ~/.oldconfigs/.vimrc
 fi
-ln -fF $DIR/.vimrc ~/.vimrc
+ln -s -fF $DIR/.vimrc ~/.vimrc
 echo
 
 if [ -d ~/.vim ]; then
@@ -47,7 +47,7 @@ if [ -d ~/.vim ]; then
   if [ -d ~/.oldconfigs/.vim ]; then rm -rf ~/.oldconfigs/.vim; fi
   mv ~/.vim ~/.oldconfigs/.vim
 fi
-cp -r $DIR/.vim ~/.vim
+ln -s $DIR/.vim ~/.vim
 echo
 
 echo "Installing fonts.."
@@ -64,6 +64,6 @@ if [ "$(uname -s)" == "Linux" ]; then
     echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
     mv ~/.Xresources ~/.oldconfigs/.Xresources
   fi
-  ln -fF $DIR/.xinitrc ~/.xinitrc
-  ln -fF $DIR/.Xresources ~/.Xresources
+  ln -s -fF $DIR/.xinitrc ~/.xinitrc
+  ln -s -fF $DIR/.Xresources ~/.Xresources
 fi
