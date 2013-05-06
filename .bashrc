@@ -39,3 +39,5 @@ export GREP_OPTIONS="--color"
 export TERM='xterm-color'
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
+
+tdo tasks

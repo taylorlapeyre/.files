@@ -51,7 +51,7 @@ cp -r $DIR/.vim ~/.vim
 echo
 
 echo "Installing fonts.."
-cp -r $DIR/fonts/* ~/.fonts
+cp -r $DIR/.fonts/* ~/.fonts
 fc-cache -fv
 
 if [ "$(uname -s)" == "Linux" ]; then
