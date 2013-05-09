@@ -64,6 +64,12 @@ if [ "$(uname -s)" == "Linux" ]; then
     echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
     mv ~/.Xresources ~/.oldconfigs/.Xresources
   fi
+
+  if [ -f ~/.i3/config ]; then
+    echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
+    mv ~/.i3/config ~/.oldconfigs/.i3config
+  fi
+  ln -s -fF $DIR/.i3config ~/.i3/config
   ln -s -fF $DIR/.xinitrc ~/.xinitrc
   ln -s -fF $DIR/.Xresources ~/.Xresources
 fi
