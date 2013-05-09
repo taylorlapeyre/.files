@@ -4,8 +4,8 @@ else
   token="$"
 fi
 
-PATH=$HOME/home/bin:$PATH
-PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $token "
+export PATH=$HOME/home/bin:$PATH
+export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $token "
 
 # Shell options
 set -o vi
@@ -29,7 +29,7 @@ else
 fi
 alias xopen='xdg-open'
 alias home='cd $HOME/home'
-alias fuckin='sudo '
+alias please='sudo '
 alias cleanarch='sudo pacman -Rsn $(pacman -Qqdt)'
 
 
@@ -40,4 +40,7 @@ export TERM='xterm-color'
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 
-tdo tasks
+hash tdo &> /dev/null
+if [ $? -eq 0 ]; then
+  tdo tasks
+fi
