@@ -4,7 +4,7 @@ else
   token="$"
 fi
 
-export PATH=$HOME/home/bin:$PATH
+export PATH=$HOME/home/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $token "
 
 # Shell options
