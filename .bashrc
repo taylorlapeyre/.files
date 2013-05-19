@@ -1,11 +1,5 @@
-if [ $UID == 0 ]; then
-  token="#"
-else
-  token="$"
-fi
-
 export PATH=$HOME/home/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $token "
+export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
 
 # Shell options
 set -o vi
