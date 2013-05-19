@@ -1,15 +1,9 @@
 #!/bin/bash
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-if [ "$DIR" == "$HOME/home/.config" ]; then
-  cd $HOME/home/.config
-  git checkout master
-  git pull -u origin master
-fi
-
-if [ ! -d ~/.fonts ]; then
-  mkdir ~/.fonts
-fi
+cd $DIR
+git checkout master
+git pull -u origin master
 
 if [ ! -d ~/.oldconfigs ]; then
   mkdir ~/.oldconfigs
@@ -25,21 +19,21 @@ else
     mv ~/.bashrc ~/.oldconfigs/.bashrc
   fi
 fi
-ln -s -fF $DIR/.bashrc ~/.bashrc
+ln -s -fF $DIR/standard/.bashrc ~/.bashrc
 echo
 
 if [ -f ~/.gitconfig ]; then
   echo "gitconfig exists. Moving old gitconfig to ~/.oldconfigs.."
   mv ~/.gitconfig ~/.oldconfigs/.gitconfig
 fi
-ln -s -fF $DIR/.gitconfig ~/.gitconfig
+ln -s -fF $DIR/standard/.gitconfig ~/.gitconfig
 echo
 
 if [ -f ~/.vimrc ]; then
   echo "vimrc exists. Moving old vimrc to ~/.oldconfigs.."
   mv ~/.vimrc ~/.oldconfigs/.vimrc
 fi
-ln -s -fF $DIR/.vimrc ~/.vimrc
+ln -s -fF $DIR/standard/.vimrc ~/.vimrc
 echo
 
 if [ -d ~/.vim ]; then
@@ -47,10 +41,13 @@ if [ -d ~/.vim ]; then
   if [ -d ~/.oldconfigs/.vim ]; then rm -rf ~/.oldconfigs/.vim; fi
   mv ~/.vim ~/.oldconfigs/.vim
 fi
-ln -s $DIR/.vim ~/.vim
+ln -s $DIR/standard/.vim ~/.vim
 echo
 
 echo "Installing fonts.."
+if [ ! -d ~/.fonts ]; then
+  mkdir ~/.fonts
+fi
 cp -r $DIR/.fonts/* ~/.fonts
 fc-cache -fv
 
@@ -69,7 +66,7 @@ if [ "$(uname -s)" == "Linux" ]; then
     echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
     mv ~/.i3/config ~/.oldconfigs/.i3config
   fi
-  ln -s -fF $DIR/.i3config ~/.i3/config
-  ln -s -fF $DIR/.xinitrc ~/.xinitrc
-  ln -s -fF $DIR/.Xresources ~/.Xresources
+  ln -s -fF $DIR/arch/.i3config ~/.i3/config
+  ln -s -fF $DIR/arch/.xinitrc ~/.xinitrc
+  ln -s -fF $DIR/arch/.Xresources ~/.Xresources
 fi
