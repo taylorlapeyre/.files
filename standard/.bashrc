@@ -16,12 +16,12 @@ fi
 if [ "$(uname -s)" == "Linux" ]; then
   alias ls='ls --color=auto'
   alias ll='ls -lGh --color=auto --group-directories-first'
+  alias open='xdg-open'
 else
   alias ls='ls -G'
   alias ll='ls -lhG'
-  alias subl='open -a "Sublime Text 2"'
+  alias subl='open -a "Sublime Text"'
 fi
-alias xopen='xdg-open'
 alias home='cd $HOME/home'
 alias please='sudo '
 alias cleanarch='sudo pacman -Rsn $(pacman -Qqdt)'
