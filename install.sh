@@ -44,29 +44,33 @@ fi
 ln -s $DIR/standard/.vim ~/.vim
 echo
 
+if [ "$(uname -s)" == "Linux" ]; then
+  if [ -f ~/.xinitrc ]; then
+    echo ".xinitrc exists. Moving old .xinitrc to ~/.oldconfigs"
+    mv ~/.xinitrc ~/.oldconfigs/.xinitrc
+  fi
+  ln -s -fF $DIR/arch/.xinitrc ~/.xinitrc
+  echo
+
+  if [ -f ~/.Xresources ]; then
+    echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
+    mv ~/.Xresources ~/.oldconfigs/.Xresources
+  fi
+  ln -s -fF $DIR/arch/.Xresources ~/.Xresources
+  echo
+
+  if [ -f ~/.i3/config ]; then
+    echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
+    mv ~/.i3/config ~/.oldconfigs/.i3config
+    if [ ! -d $HOME/.i3 ]; then mkdir $HOME/.i3; fi
+  fi
+  ln -s -fF $DIR/arch/.i3config ~/.i3/config
+  echo
+fi
+
 echo "Installing fonts.."
 if [ ! -d ~/.fonts ]; then
   mkdir ~/.fonts
 fi
 cp -r $DIR/.fonts/* ~/.fonts
 fc-cache -fv
-
-if [ "$(uname -s)" == "Linux" ]; then
-  if [ -f ~/.xinitrc ]; then
-    echo ".xinitrc exists. Moving old .xinitrc to ~/.oldconfigs"
-    mv ~/.xinitrc ~/.oldconfigs/.xinitrc
-  fi
-
-  if [ -f ~/.Xresources ]; then
-    echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
-    mv ~/.Xresources ~/.oldconfigs/.Xresources
-  fi
-
-  if [ -f ~/.i3/config ]; then
-    echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
-    mv ~/.i3/config ~/.oldconfigs/.i3config
-  fi
-  ln -s -fF $DIR/arch/.i3config ~/.i3/config
-  ln -s -fF $DIR/arch/.xinitrc ~/.xinitrc
-  ln -s -fF $DIR/arch/.Xresources ~/.Xresources
-fi
