@@ -9,6 +9,8 @@ if [ ! -d ~/.oldconfigs ]; then
   mkdir ~/.oldconfigs
 fi
 
+echo
+
 if [ -f ~/.bash_profile ]; then
   echo "bash_profile exists. Moving old bash_profile to ~/.oldconfigs.."
   mv ~/.bash_profile ~/.oldconfigs/.bash_profile
@@ -20,21 +22,18 @@ else
   fi
 fi
 ln -s -fF $DIR/standard/.bashrc ~/.bashrc
-echo
 
 if [ -f ~/.gitconfig ]; then
   echo "gitconfig exists. Moving old gitconfig to ~/.oldconfigs.."
   mv ~/.gitconfig ~/.oldconfigs/.gitconfig
 fi
 ln -s -fF $DIR/standard/.gitconfig ~/.gitconfig
-echo
 
 if [ -f ~/.vimrc ]; then
   echo "vimrc exists. Moving old vimrc to ~/.oldconfigs.."
   mv ~/.vimrc ~/.oldconfigs/.vimrc
 fi
 ln -s -fF $DIR/standard/.vimrc ~/.vimrc
-echo
 
 if [ -d ~/.vim ]; then
   echo ".vim/ exists. Moving old .vim/ to ~/.oldconfigs.."
@@ -42,7 +41,6 @@ if [ -d ~/.vim ]; then
   mv ~/.vim ~/.oldconfigs/.vim
 fi
 ln -s $DIR/standard/.vim ~/.vim
-echo
 
 if [ "$(uname -s)" == "Linux" ]; then
   if [ -f ~/.xinitrc ]; then
@@ -50,14 +48,12 @@ if [ "$(uname -s)" == "Linux" ]; then
     mv ~/.xinitrc ~/.oldconfigs/.xinitrc
   fi
   ln -s -fF $DIR/arch/.xinitrc ~/.xinitrc
-  echo
 
   if [ -f ~/.Xresources ]; then
     echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
     mv ~/.Xresources ~/.oldconfigs/.Xresources
   fi
   ln -s -fF $DIR/arch/.Xresources ~/.Xresources
-  echo
 
   if [ -f ~/.i3/config ]; then
     echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
@@ -65,8 +61,8 @@ if [ "$(uname -s)" == "Linux" ]; then
     if [ ! -d $HOME/.i3 ]; then mkdir $HOME/.i3; fi
   fi
   ln -s -fF $DIR/arch/.i3config ~/.i3/config
-  echo
 fi
+echo
 
 echo "Installing fonts.."
 if [ ! -d ~/.fonts ]; then
