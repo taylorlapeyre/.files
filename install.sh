@@ -42,7 +42,7 @@ if [ -d ~/.vim ]; then
 fi
 ln -s $DIR/standard/.vim ~/.vim
 
-if [ "$(uname -s)" == "Linux" ]; then
+if [ "$(cat /etc/*-release | head -1 | cut -d '=' -f 2 | sed 's/"//g')" == "Arch Linux" ]; then
   if [ -f ~/.xinitrc ]; then
     echo ".xinitrc exists. Moving old .xinitrc to ~/.oldconfigs"
     mv ~/.xinitrc ~/.oldconfigs/.xinitrc
