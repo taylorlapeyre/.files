@@ -6,20 +6,11 @@
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
 [alias]
-	switch = !legit switch \"$@\"
-	branches = !legit branches
-	sprout = !legit sprout \"$@\"
-	unpublish = !legit unpublish \"$@\"
-	harvest = !legit harvest \"$@\"
-	sync = !legit sync \"$@\"
-	publish = !legit publish \"$@\"
-	graft = !legit graft \"$@\"
-	g = git
 	st = status
-	cm = "commit -m"
-	aa = "add --all"
+  cm = commit
 	co = checkout
-
+	aa = "add --all"
+  rh = "reset --hard"
 
   # Fancy logging.
   #   h = head
@@ -35,7 +26,6 @@
   ra = !git r --all
   l = "!. ~/.githelpers && pretty_git_log"
   la = !git l --all
-	cm = commit
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path =
