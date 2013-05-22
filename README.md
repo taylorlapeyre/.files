@@ -1,22 +1,16 @@
 # My Tools
 
-<br>
+These are the only things that I install on my computers.
 
 ## Applications
 
 _Tools with a native user interface._
-
-**OSX**
 
 > #### [Sublime Text](http://www.sublimetext.com)
 
 > #### [Rdio](http://www.rdio.com)
 
 > #### [Alfred](http://www.alfredapp.com)
-
-**Linux**
-
-> #### [Sublime Text](http://www.sublimetext.com)
 
 
 ## Utilities
