@@ -9,7 +9,7 @@
 	st = status
   cm = commit
 	co = checkout
-	aa = "add --all"
+	aa = "add --all :/"
   rh = "reset --hard"
 
   # Fancy logging.
