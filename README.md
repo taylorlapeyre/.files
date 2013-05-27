@@ -37,6 +37,6 @@ _Tools that I use through the internet._
 
 ## Other
 
-> #### Color Scheme: [Monokai](http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/)
+> #### Color Scheme: [Monokai](http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/), [IR Black](http://toddwerth.com/2008/01/25/a-black-os-x-leopard-terminal-theme-that-is-actually-readable/), or [Solarized Dark](http://ethanschoonover.com/solarized)
 
 > #### Font: [Pragmata Pro](http://www.fsd.it/fonts/pragmatapro.htm)
