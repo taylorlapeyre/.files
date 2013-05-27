@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/Users/taylorlapeyre/Dropbox/Code/ruby/LSU/TriangleMaker'
-let g:netrw_dirhist_2='/Users/taylorlapeyre/Desktop/JP'
-let g:netrw_dirhist_3='/Users/taylorlapeyre/Desktop/taylorlapeyre.me/_posts'
-let g:netrw_dirhist_4='/Users/taylorlapeyre/Dropbox/Code/java/LSU/BST'
-let g:netrw_dirhist_5='/Users/taylorlapeyre/Desktop/octopress/.git'
-let g:netrw_dirhist_6='/Users/taylorlapeyre/Dropbox/Code/web/tvl.herokuapp.com/sass/partials/sidebar'
-let g:netrw_dirhist_7='/Users/taylorlapeyre/.vim'
-let g:netrw_dirhist_8='/Users/taylorlapeyre/Desktop/dotfiles/.vim/indent'
-let g:netrw_dirhist_9='/Users/taylorlapeyre/.vim'
+let g:netrw_dirhist_cnt =0
