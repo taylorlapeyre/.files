@@ -2,6 +2,7 @@
 	filemode = false
 	excludesfile = /Users/taylorlapeyre/.gitignore_global
 	quotepath = false
+	whitespace = trailing-space,space-before-tab
 [user]
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
@@ -31,11 +32,14 @@
 	prompt = false
 [merge]
 	tool = Kaleidoscope
+	stat = true
 [format]
 	pretty = oneline
 [color]
-	ui = true
+	ui = auto
 [pull]
 	rebase = true
 [push]
 	default = simple
+[branch]
+	autosetupmerge = true
