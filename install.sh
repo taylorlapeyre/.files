@@ -61,12 +61,6 @@ if [ "$(cat /etc/*-release | head -1 | cut -d '=' -f 2 | sed 's/\"//g')" == "Arc
     if [ ! -d $HOME/.i3 ]; then mkdir $HOME/.i3; fi
   fi
   ln -s -fF $DIR/arch/.i3config ~/.i3/config
-
-  if [ -f ~/.xmodmaprc ]; then
-    echo ".xmodmaprc exists. Moving old .xmodmaprc to ~/.oldconfigs"
-    mv ~/.xmodmaprc ~/.oldconfigs/.xmodmaprc
-  fi
-  ln -s -fF $DIR/arch/.xmodmaprc ~/.xmodmaprc
 fi
 echo
 

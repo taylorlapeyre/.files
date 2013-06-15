@@ -1,13 +1,19 @@
+# I like to be explicit with my PATH. the ~/home/bin path is personal.
 export PATH=$HOME/home/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+# The dollar sign is ubiquitous.
 export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
 
 # Shell options
+
+# <3 vim
 set -o vi
+
+# Just misc. useful stuff.
 shopt -s cdspell
 shopt -s hostcomplete
 shopt -s nocaseglob
 
-# Aliases
+# Aliases, seperated between Linux and OSX systems
 if [ "$(uname -s)" == "Linux" ]; then
   alias ls='ls --color=auto'
   alias ll='ls -lGh --color=auto --group-directories-first'
@@ -18,15 +24,19 @@ else
   alias ll='ls -lhG'
   alias subl='open -a "Sublime Text"'
 fi
+# Let's be polite.
 alias please='sudo '
 
-# Misc
+# Color is good.
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 export TERM='xterm-color'
+
+# History is good.
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 
+# This is for the todo script that I made. If you don't have it, it won't do anything.
 hash tdo &> /dev/null
 if [ $? -eq 0 ]; then
   tdo tasks

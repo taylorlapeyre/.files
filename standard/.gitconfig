@@ -4,20 +4,26 @@
 	quotepath = false
 	whitespace = trailing-space,space-before-tab
 [user]
+	# Change these to your details
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
 [alias]
   cm = commit
 	co = checkout
+
+	# Shortened status command
 	st = "status -sb"
 	aa = "add --all :/"
   rh = "reset --hard"
+
+	# Better git log
   lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 [format]
 	pretty = oneline
 [color]
 	ui = auto
 [pull]
+	# To eliminate pull merge commits
 	rebase = true
 [push]
 	default = simple
