@@ -22,4 +22,4 @@ While they are mine, you can use them too. The install script included will back
 - launcher - [alfred](http://www.alfredapp.com/)
 
 
-![Recent Desktop](http://i.imgur.com/pnK6OWJ.jpg)
+![Recent Desktop](screenshot.png)
