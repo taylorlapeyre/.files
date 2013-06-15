@@ -21,46 +21,46 @@ else
     mv ~/.bashrc ~/.oldconfigs/.bashrc
   fi
 fi
-ln -s -fF $DIR/standard/.bashrc ~/.bashrc
+ln -s -fF $DIR/.bashrc ~/.bashrc
 
 if [ -f ~/.gitconfig ]; then
   echo "gitconfig exists. Moving old gitconfig to ~/.oldconfigs.."
   mv ~/.gitconfig ~/.oldconfigs/.gitconfig
 fi
-ln -s -fF $DIR/standard/.gitconfig ~/.gitconfig
+ln -s -fF $DIR/.gitconfig ~/.gitconfig
 
 if [ -f ~/.vimrc ]; then
   echo "vimrc exists. Moving old vimrc to ~/.oldconfigs.."
   mv ~/.vimrc ~/.oldconfigs/.vimrc
 fi
-ln -s -fF $DIR/standard/.vimrc ~/.vimrc
+ln -s -fF $DIR/.vimrc ~/.vimrc
 
 if [ -d ~/.vim ]; then
   echo ".vim/ exists. Moving old .vim/ to ~/.oldconfigs.."
   if [ -d ~/.oldconfigs/.vim ]; then rm -rf ~/.oldconfigs/.vim; fi
   mv ~/.vim ~/.oldconfigs/.vim
 fi
-ln -s $DIR/standard/.vim ~/.vim
+ln -s $DIR/.vim ~/.vim
 
 if [ "$(cat /etc/*-release | head -1 | cut -d '=' -f 2 | sed 's/\"//g')" == "Arch Linux" ]; then
   if [ -f ~/.xinitrc ]; then
     echo ".xinitrc exists. Moving old .xinitrc to ~/.oldconfigs"
     mv ~/.xinitrc ~/.oldconfigs/.xinitrc
   fi
-  ln -s -fF $DIR/arch/.xinitrc ~/.xinitrc
+  ln -s -fF $DIR/.xinitrc ~/.xinitrc
 
   if [ -f ~/.Xresources ]; then
     echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
     mv ~/.Xresources ~/.oldconfigs/.Xresources
   fi
-  ln -s -fF $DIR/arch/.Xresources ~/.Xresources
+  ln -s -fF $DIR/.Xresources ~/.Xresources
 
   if [ -f ~/.i3/config ]; then
     echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
     mv ~/.i3/config ~/.oldconfigs/.i3config
     if [ ! -d $HOME/.i3 ]; then mkdir $HOME/.i3; fi
   fi
-  ln -s -fF $DIR/arch/.i3config ~/.i3/config
+  ln -s -fF $DIR/.i3config ~/.i3/config
 fi
 echo
 
