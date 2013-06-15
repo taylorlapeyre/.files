@@ -10,14 +10,12 @@
 [alias]
   cm = commit
 	co = checkout
-
 	# Shortened status command
 	st = "status -sb"
 	aa = "add --all :/"
 	rh = "reset --hard"
-
 	# Better git log
-  lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 [format]
 	pretty = oneline
 [color]
