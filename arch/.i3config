@@ -21,21 +21,18 @@ set $mod Mod4
 font pango:PragmataPro 10
 
 new_window pixel
-# feh --bg-scale ~/bg.png
-exec --no-startup-id feh --bg-scale ~/bg.png
 # exec --no-startup-id xsetroot -solid "#223344"
 
 bar {
     output            LVDS1
     status_command    i3status
-    mode              hide
     workspace_buttons yes
     tray_output       none
     
-    font pango:PragmataPro 10
+    font pango:PragmataPro 8
 
     colors {
-        background #000000
+        background #111111
         statusline #ffffff
 
         focused_workspace  #ffffff #285577
