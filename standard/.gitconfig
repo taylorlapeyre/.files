@@ -8,7 +8,7 @@
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
 [alias]
-  cm = commit
+	cm = commit
 	co = checkout
 	# Shortened status command
 	st = "status -sb"
