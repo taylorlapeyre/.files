@@ -1,42 +1,22 @@
-# My Tools
+My dotfiles are for OSX and Arch Linux systems.
 
-These are the only things that I install on my computers.
+I don't customize my tools heavily, and tend to lean toward sensible defaults whereever possible.
 
-## Applications
+While these dotfiles are mine, you can use them too. The install script included will backup your existing dotfiles if you want to give them a try.
 
-_Tools with a native user interface._
+#### Arch
 
-> #### [Sublime Text](http://www.sublimetext.com)
+- window manager - [i3](http://i3wm.org/)
+- terminal - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
+- editor - [vim](http://www.vim.org/)
+- version control - [git](http://git-scm.com/)
+- browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
+- launcher - [dmenu](http://tools.suckless.org/dmenu/)
 
-> #### [Rdio](http://www.rdio.com)
+#### OSX
 
-> #### [Alfred](http://www.alfredapp.com)
-
-
-## Utilities
-
-_Tools that I use through my terminal._
-
-> #### [git](https://github.com/git/git)
-
-> #### [vagrant](https://github.com/mitchellh/vagrant)
-
-> #### [irssi](http://www.irssi.org/)
-
-
-## Services
-
-_Tools that I use through the internet._
-
-> #### [Pinboard](https://pinboard.in/u:taylorlapeyre)
-
-> #### [Newsblur](http://newsblur.com)
-
-> #### [Linode](http://www.linode.com/)
-
-
-## Other
-
-> #### Color Scheme: [Monokai](http://www.monokai.nl/blog/2006/07/15/textmate-color-theme/), [IR Black](http://toddwerth.com/2008/01/25/a-black-os-x-leopard-terminal-theme-that-is-actually-readable/), or [Solarized Dark](http://ethanschoonover.com/solarized)
-
-> #### Font: [Pragmata Pro](http://www.fsd.it/fonts/pragmatapro.htm)
+- terminal - [terminal.app](http://www.apple.com/osx/apps/all.html#terminal)
+- editor - [sublime text](http://www.sublimetext.com/)
+- version control - [git](http://git-scm.com/)
+- browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
+- launcher - [alfred](http://www.alfredapp.com/)
