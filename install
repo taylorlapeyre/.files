@@ -47,20 +47,20 @@ if [ "$(cat /etc/*-release | head -1 | cut -d '=' -f 2 | sed 's/\"//g')" == "Arc
     echo ".xinitrc exists. Moving old .xinitrc to ~/.oldconfigs"
     mv ~/.xinitrc ~/.oldconfigs/.xinitrc
   fi
-  ln -s -fF $DIR/.xinitrc ~/.xinitrc
+  ln -s -fF $DIR/arch-specific/.xinitrc ~/.xinitrc
 
   if [ -f ~/.Xresources ]; then
     echo ".Xresources exists. Moving old .Xresources to ~/.oldconfigs"
     mv ~/.Xresources ~/.oldconfigs/.Xresources
   fi
-  ln -s -fF $DIR/.Xresources ~/.Xresources
+  ln -s -fF $DIR/arch-specific/.Xresources ~/.Xresources
 
   if [ -f ~/.i3/config ]; then
     echo ".i3/config  exists. Moving old .i3/config to ~/.oldconfigs"
     mv ~/.i3/config ~/.oldconfigs/.i3config
     if [ ! -d $HOME/.i3 ]; then mkdir $HOME/.i3; fi
   fi
-  ln -s -fF $DIR/.i3config ~/.i3/config
+  ln -s -fF $DIR/arch-specific/.i3config ~/.i3/config
 fi
 echo
 

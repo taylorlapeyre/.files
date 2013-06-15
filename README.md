@@ -22,5 +22,5 @@ While they are mine, you can use them too. The install script included will back
 - launcher - [alfred](http://www.alfredapp.com/)
 
 
-![Linux Desktop](linux.png)
-![OSX Desktop](osx.png)
+![Linux Desktop](screenshots/linux.png)
+![OSX Desktop](screenshots/osx.png)
