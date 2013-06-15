@@ -1,8 +1,8 @@
-My dotfiles are for OSX and Arch Linux systems.
+**These are my dotfiles for Unix systems.**
 
 I don't customize my tools heavily, and tend to lean toward sensible defaults whereever possible.
 
-While these dotfiles are mine, you can use them too. The install script included will backup your existing dotfiles if you want to give them a try.
+While they are mine, you can use them too. The install script included will backup your existing dotfiles if you want to give them a try.
 
 #### Arch
 
@@ -20,3 +20,6 @@ While these dotfiles are mine, you can use them too. The install script included
 - version control - [git](http://git-scm.com/)
 - browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
 - launcher - [alfred](http://www.alfredapp.com/)
+
+
+![Recent Desktop](http://i.imgur.com/pnK6OWJ.jpg)
