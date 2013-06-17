@@ -1,9 +1,6 @@
-# I like to be explicit with my PATH. the ~/home/bin path is personal.
-export PATH=$HOME/home/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-# The dollar sign is ubiquitous.
+export PATH=$HOME/home/bin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+# username: ~/path $
 export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
-
-# Shell options
 
 # <3 vim
 set -o vi
