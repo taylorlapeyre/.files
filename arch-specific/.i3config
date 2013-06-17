@@ -4,22 +4,22 @@ font pango:PragmataPro 10
 new_window pixel # Pixel border for new windows
 
 bar {
-    output            LVDS1
-    status_command    i3status
-    workspace_buttons yes
-    tray_output       none
-    
-    font pango:PragmataPro 8
+	output            LVDS1
+	status_command    i3status
+	workspace_buttons yes
+	tray_output       none
+	
+	font pango:PragmataPro 8
 
-    colors {
-        background #111111
-        statusline #ffffff
+	colors {
+		background #111111
+		statusline #ffffff
 
-        focused_workspace  #111111 #aaaaaa
-        active_workspace   #aaaaaa #111111
-        inactive_workspace #aaaaaa #111111
-        urgent_workspace   #ffffff #900000
-    }
+		focused_workspace  #111111 #aaaaaa
+		active_workspace   #aaaaaa #111111
+		inactive_workspace #aaaaaa #111111
+		urgent_workspace   #ffffff #900000
+	}
 }
 
 
@@ -109,21 +109,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
+		# These bindings trigger as soon as you enter the resize mode
 
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+		bindsym h resize shrink width 10 px or 10 ppt
+		bindsym j resize grow height 10 px or 10 ppt
+		bindsym k resize shrink height 10 px or 10 ppt
+		bindsym l resize grow width 10 px or 10 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
+		# same bindings, but for the arrow keys
+		bindsym Left resize shrink width 10 px or 10 ppt
+		bindsym Down resize grow height 10 px or 10 ppt
+		bindsym Up resize shrink height 10 px or 10 ppt
+		bindsym Right resize grow width 10 px or 10 ppt
 
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
+		# back to normal: Enter or Escape
+		bindsym Return mode "default"
+		bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"

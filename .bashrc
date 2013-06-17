@@ -22,14 +22,14 @@ fi
 
 # Aliases, seperated between Linux and OSX systems
 if [ "$(uname -s)" == "Linux" ]; then
-  alias ls='ls --color=auto'
-  alias ll='ls -lGh --color=auto --group-directories-first'
-  alias open='xdg-open'
-  alias cleanarch='sudo pacman -Rsn $(pacman -Qqdt)'
+	alias ls='ls --color=auto'
+	alias ll='ls -lGh --color=auto --group-directories-first'
+	alias open='xdg-open'
+	alias cleanarch='sudo pacman -Rsn $(pacman -Qqdt)'
 else
-  alias ls='ls -G'
-  alias ll='ls -lhG'
-  alias subl='open -a "Sublime Text"'
+	alias ls='ls -G'
+	alias ll='ls -lhG'
+	alias subl='open -a "Sublime Text"'
 fi
 # Let's be polite.
 alias please='sudo '
@@ -46,5 +46,5 @@ export HISTCONTROL=erasedups
 # A simple todo program that I made.
 hash tdo &> /dev/null
 if [ $? -eq 0 ]; then
-  tdo tasks
+	tdo tasks
 fi
