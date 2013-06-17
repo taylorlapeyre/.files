@@ -13,6 +13,13 @@ shopt -s cdspell
 shopt -s hostcomplete
 shopt -s nocaseglob
 
+# Chruby, for switching rubies
+hash chruby-exec &> /dev/null
+if [ $? -eq 0 ]; then
+	source /usr/local/opt/chruby/share/chruby/chruby.sh
+	chruby ruby-2.0
+fi
+
 # Aliases, seperated between Linux and OSX systems
 if [ "$(uname -s)" == "Linux" ]; then
   alias ls='ls --color=auto'
@@ -36,7 +43,7 @@ export TERM='xterm-color'
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 
-# This is for the todo script that I made. If you don't have it, it won't do anything.
+# A simple todo program that I made.
 hash tdo &> /dev/null
 if [ $? -eq 0 ]; then
   tdo tasks
