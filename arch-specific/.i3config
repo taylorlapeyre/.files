@@ -1,7 +1,7 @@
 set $mod Mod4
 font pango:PragmataPro 10
 
-new_window pixel # Pixel border for new windows
+new_window pixel
 
 bar {
 	output            LVDS1
