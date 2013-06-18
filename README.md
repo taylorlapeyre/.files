@@ -20,6 +20,3 @@ While they are mine, you can use them too. The install script included will back
 - version control - [git](http://git-scm.com/)
 - browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
 - launcher - [alfred](http://www.alfredapp.com/)
-
-
-![Linux Desktop](screenshots/linux.png)
