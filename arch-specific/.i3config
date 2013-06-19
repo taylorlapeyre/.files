@@ -1,7 +1,7 @@
 set $mod Mod4
 font pango:PragmataPro 10
 
-new_window pixel # Pixel border for new windows
+new_window pixel
 
 bar {
 	output            LVDS1
@@ -15,9 +15,9 @@ bar {
 		background #111111
 		statusline #ffffff
 
-		focused_workspace  #111111 #aaaaaa
-		active_workspace   #aaaaaa #111111
-		inactive_workspace #aaaaaa #111111
+		focused_workspace  #111111 #999999
+		active_workspace   #999999 #111111
+		inactive_workspace #999999 #111111
 		urgent_workspace   #ffffff #900000
 	}
 }

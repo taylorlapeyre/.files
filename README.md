@@ -1,8 +1,11 @@
-**These are my dotfiles for Unix systems.**
+#### These are my dotfiles for Unix systems.
 
-I don't customize my tools heavily, and tend to lean toward sensible defaults whereever possible.
+I don't customize my tools heavily. Instead, **I tend to lean toward sensible defaults where ever possible.**
 
-While they are mine, you can use them too. The install script included will backup your existing dotfiles if you want to give them a try.
+The result is an enviroment that behaves exactly as expected, but has a few more features that make life easier. It is never surprising, and it never gets in the way.
+
+If you would like to use this enviroment, I'd recommend starting with a _clean slate_ using the most recent version of [Arch Linux](https://www.archlinux.org/) or [OSX](http://www.apple.com/osx/), installing the below software, and then running the install script included in these dotfiles.
+
 
 #### Arch
 
@@ -20,6 +23,3 @@ While they are mine, you can use them too. The install script included will back
 - version control - [git](http://git-scm.com/)
 - browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
 - launcher - [alfred](http://www.alfredapp.com/)
-
-
-![Linux Desktop](screenshots/linux.png)
