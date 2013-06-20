@@ -1,6 +1,6 @@
 export PATH=$HOME/home/bin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
-# username: ~/path $
 
+# Let me know if I'm on a remote host. Format: "username: ~/path $ "
 if [ -z "$SSH_CLIENT" ]; then
 	export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
 else
