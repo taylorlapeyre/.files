@@ -4,7 +4,7 @@ export PATH=$HOME/home/bin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bi
 if [ -z "$SSH_CLIENT" ]; then
 	export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
 else
-	export PS1="(remote) \u: \[$(tput setaf 3)\]\w\[$(tput sgr0)\] $ "
+	export PS1="($(hostname)) \u: \[$(tput setaf 3)\]\w\[$(tput sgr0)\] $ "
 fi
 
 # <3 vim
