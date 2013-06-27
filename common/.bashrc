@@ -10,9 +10,6 @@ else
 	export PS1="($(hostname)) \u: \[$(tput setaf 3)\]\w\[$(tput sgr0)\] $ "
 fi
 
-# <3 vim
-set -o vi
-
 # Just misc. useful stuff.
 shopt -s cdspell
 shopt -s hostcomplete
