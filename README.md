@@ -2,10 +2,7 @@
 
 I don't customize my tools heavily. Instead, **I tend to lean toward sensible defaults where ever possible.**
 
-The result is an enviroment that behaves exactly as expected, but has a few more features that make life easier. It is never surprising, and it never gets in the way.
-
-If you would like to use this enviroment, I'd recommend starting with a _clean slate_ using the most recent version of [Arch Linux](https://www.archlinux.org/) or [OSX](http://www.apple.com/osx/), installing the below software, and then running the install script included in these dotfiles.
-
+If you would like to use this enviroment, I recommend starting with a _clean slate_ using the most recent version of [Arch Linux](https://www.archlinux.org) or [OSX](http://www.apple.com/osx/). Install the below software, and then run the install script included in these dotfiles.
 
 #### Arch
 
