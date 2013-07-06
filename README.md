@@ -7,7 +7,7 @@ If you would like to use this enviroment, I recommend starting with a _clean sla
 #### Arch
 
 - window manager - [i3](http://i3wm.org/)
-- terminal - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html)
+- terminal - [urxvt-patched](https://aur.archlinux.org/packages/rxvt-unicode-patched/)
 - editor - [vim](http://www.vim.org/)
 - version control - [git](http://git-scm.com/)
 - browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
