@@ -1,8 +1,7 @@
-#### These are my dotfiles for Unix systems.
+**These are my dotfiles for Unix systems.**
 
-I don't customize my tools heavily. Instead, **I tend to lean toward sensible defaults where ever possible.**
+A firm understanding of Unix is recommended before installing them onto your system. Below are my recommended tools.
 
-If you would like to use this enviroment, I recommend starting with a _clean slate_ using the most recent version of [Arch Linux](https://www.archlinux.org) or [OSX](http://www.apple.com/osx/). Install the below software, and then run the install script included in these dotfiles.
 
 #### Arch
 
