@@ -8,8 +8,8 @@
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
 [alias]
-	cm = commit
 	co = checkout
+	cm = "commit -m"
 	st = "status -sb"
 	aa = "add --all :/"
 	rh = "reset --hard"
