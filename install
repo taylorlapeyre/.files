@@ -64,10 +64,3 @@ if [ "$(cat /etc/*-release | head -1 | cut -d '=' -f 2 | sed 's/\"//g')" == "Arc
   ln -s -fF $DIR/arch-specific/.i3config ~/.i3/config
 fi
 echo
-
-echo "Installing fonts.."
-if [ ! -d ~/.fonts ]; then
-  mkdir ~/.fonts
-fi
-cp -r $DIR/.fonts/* ~/.fonts
-fc-cache -fv
