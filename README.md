@@ -2,6 +2,17 @@
 
 A firm understanding of Unix is recommended before installing them onto your system. Below are my recommended tools.
 
+#### Using
+
+Use [GNU Stow](http://www.gnu.org/software/stow/) to install the dotfiles that you'd like as such:
+
+``` bash
+    $ cd .files
+    $ stow git
+    $ stow vim
+    $ stow bash
+```
+
 
 #### Arch
 
