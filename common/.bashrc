@@ -13,6 +13,10 @@ export TERM='xterm-color'
 export HISTSIZE=10000
 export HISTCONTROL=erasedups
 
+shopt -s cdspell
+shopt -s hostcomplete
+shopt -s nocaseglob
+
 # Let me know if I'm on a remote host. Format: "username: ~/path $ "
 if [ -z "$SSH_CLIENT" ]; then
 	export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
@@ -20,9 +24,9 @@ else
 	export PS1="($(hostname)) \u: \[$(tput setaf 3)\]\w\[$(tput sgr0)\] $ "
 fi
 
-shopt -s cdspell
-shopt -s hostcomplete
-shopt -s nocaseglob
+if [[ -f $HOME/.bash_aliases ]]; then
+	source $HOME/.bash_aliases
+fi
 
 # Aliases, seperated between Linux and OSX systems
 if [ "$(uname -s)" == "Linux" ]; then
@@ -38,7 +42,6 @@ fi
 
 # Let's be polite.
 alias please='sudo '
-
 
 # Chruby, for switching rubies
 hash chruby-exec &> /dev/null
