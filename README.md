@@ -1,8 +1,5 @@
 #### These are my dotfiles for Unix systems.
 
-
-#### Using
-
 Use [GNU Stow](http://www.gnu.org/software/stow/) to install the dotfiles that you like:
 
 ``` bash
