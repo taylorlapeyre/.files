@@ -57,7 +57,7 @@ if [ $? -eq 0 ]; then
 fi
 
 # Credit: Jeroen Janssens
-function jump { 
+function j { 
 	cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
 }
 
