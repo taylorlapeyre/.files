@@ -16,6 +16,7 @@ export HISTCONTROL=erasedups
 shopt -s cdspell
 shopt -s hostcomplete
 shopt -s nocaseglob
+shopt -s globstar
 
 # Let me know if I'm on a remote host. Format: "username: ~/path $ "
 if [ -z "$SSH_CLIENT" ]; then
