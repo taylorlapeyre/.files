@@ -36,7 +36,11 @@ function install_brews() {
 
 function install_brew() {
 	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
-	install_brews
+	echo
+	echo "Running brew doctor. Run this script again afterwards."
+	echo
+	sleep 5
+	brew doctor
 }
 
 hash brew &> /dev/null
