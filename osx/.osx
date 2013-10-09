@@ -6,38 +6,82 @@ function install_brews() {
 	brew update
 	brew upgrade
 
-	brew install git 2> /dev/null
-	echo "Installed Git"
+	echo "Do you want to install git? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		brew install git 2> /dev/null
+		echo "Installed Git"
+	fi
 
-	brew install node 2> /dev/null
-	echo "Installed Node"
+	echo "Do you want to install node? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		brew install node 2> /dev/null
+		echo "Installed Node"
+	fi
 
-	brew tap phinze/homebrew-cask 2> /dev/null
-	brew install brew-cask 2> /dev/null
+	echo "Do you want to install tig? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		brew install tig 2> /dev/null
+		echo "Installed Tig"
+	fi
 
-	brew cask install sublime-text 2> /dev/null
-	echo "Installed Sublime Text"
+	echo "Do you want to install Applications? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		brew tap phinze/homebrew-cask 2> /dev/null
+		brew install brew-cask 2> /dev/null
 
-	brew cask install virtualbox 2> /dev/null
-	echo "Installed Virtualbox"
+		echo "Do you want to install Sublime Text? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install sublime-text 2> /dev/null
+			echo "Installed Sublime Text"
+		fi
 
-	brew cask install vagrant 2> /dev/null
-	echo "Installed Vagrant"
+		echo "Do you want to install Virtualbox? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install virtualbox 2> /dev/null
+			echo "Installed Virtualbox"
+		fi
 
-	brew cask install google-chrome-canary 2> /dev/null
-	echo "Installed Google Chrome"
+		echo "Do you want to install Vagrant? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install vagrant 2> /dev/null
+			echo "Installed Vagrant"
+		fi
 
-	brew cask install rdio 2> /dev/null
-	echo "Installed Rdio"
+		echo "Do you want to install Google Chrome? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install google-chrome-canary 2> /dev/null
+			echo "Installed Google Chrome"
+		fi
 
-	brew cask install alfred 2> /dev/null
-	echo "Installed Alfred"
+		echo "Do you want to install Rdio? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install rdio 2> /dev/null
+			echo "Installed Rdio"
+		fi
+
+		echo "Do you want to install Rdio? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install alfred 2> /dev/null
+			echo "Installed Alfred"
+		fi
+	fi
 }
 
 function install_brew() {
 	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 	echo
-	echo "Running brew doctor. Run this script again afterwards."
+	echo "ATTENTION: Since this is the first time homebrew is being installed,"
+	echo "we're going to run brew doctor for you. Run this script again after any issues are resolved."
 	echo
 	sleep 5
 	brew doctor
