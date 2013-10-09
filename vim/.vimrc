@@ -1,12 +1,16 @@
 if has("autocmd")
-	filetype on
-	filetype indent on
-	filetype plugin on
+	filetype off
+	filetype plugin indent on
 endif
 syntax on
 
-call pathogen#runtime_append_all_bundles()
-set runtimepath^=~/.vim/bundle/ctrl-p.vim
+" Vundle setup
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" Plugins
+Bundle 'kien/ctrlp.vim'
+
 let mapleader=","
 
 " I like seeing numbers
@@ -29,6 +33,11 @@ set hlsearch
 set ignorecase smartcase
 set backspace=indent,eol,start
 
+" Better scrolling
+set scrolloff=8
+set sidescrolloff=15
+set sidescroll=1
+
 " To see what I'm typing
 set showcmd
 
@@ -50,14 +59,9 @@ map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
 
-" Better scrolling
-set scrolloff=8
-set sidescrolloff=15
-set sidescroll=1
-
 " Smart line numbers. Relative when in normal mode.
-if has("rnu")
-	set rnu
+if has("relativenumber")
+	set relativenumber
 	au BufEnter * :set rnu
 	au BufLeave * :set nu
 	au WinEnter * :set rnu
