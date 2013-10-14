@@ -17,13 +17,13 @@ A firm understanding of Unix is recommended before installing them onto your sys
 - terminal - [urxvt-patched](https://aur.archlinux.org/packages/rxvt-unicode-patched/)
 - editor - [vim](http://www.vim.org/)
 - version control - [git](http://git-scm.com/)
-- browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
+- browser - [Firefox](http://www.mozilla.org/en-US/firefox/new/)
 - launcher - [dmenu](http://tools.suckless.org/dmenu/)
 
 #### OSX
 
-- terminal - [terminal.app](http://www.apple.com/osx/apps/all.html#terminal)
-- editor - [sublime text](http://www.sublimetext.com/)
+- terminal - [Terminal.app](http://www.apple.com/osx/apps/all.html#terminal)
+- editor - [Sublime Text](http://www.sublimetext.com/)
 - version control - [git](http://git-scm.com/)
-- browser - [firefox](http://www.mozilla.org/en-US/firefox/new/)
-- launcher - [alfred](http://www.alfredapp.com/)
+- browser - [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)
+- launcher - [Alfred](http://www.alfredapp.com/)
