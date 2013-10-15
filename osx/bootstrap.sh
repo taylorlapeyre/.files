@@ -75,7 +75,7 @@ function install_brews() {
 			echo "Installed Rdio"
 		fi
 
-		echo "Do you want to install Rdio? y/n"
+		echo "Do you want to install Alfred? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
 			brew cask install alfred 2> /dev/null
