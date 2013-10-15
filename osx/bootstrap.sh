@@ -27,6 +27,21 @@ function install_brews() {
 		echo "Installed Tig"
 	fi
 
+	echo "Do you want to install harp? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		npm install harp -g 2> /dev/null
+		echo "Installed Harp"
+	fi
+
+	echo "Do you want to install jekyll? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		gem update 2> /dev/null
+		gem install jekyll 2> /dev/null
+		echo "Installed Jekyll"
+	fi
+
 	echo "Do you want to install Applications? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
