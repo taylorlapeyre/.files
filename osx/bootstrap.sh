@@ -27,22 +27,14 @@ function install_brews() {
 		echo "Installed Tig"
 	fi
 
-	echo "Do you want to install harp? y/n"
+	echo "Do you want to install GNU stow? (required for installing dotfiles) y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
-		npm install harp -g 2> /dev/null
-		echo "Installed Harp"
+		brew install stow 2> /dev/null
+		echo "Installed Stow"
 	fi
 
-	echo "Do you want to install jekyll? y/n"
-	read RESPONSE
-	if [[ "$RESPONSE" == "y" ]]; then
-		gem update 2> /dev/null
-		gem install jekyll 2> /dev/null
-		echo "Installed Jekyll"
-	fi
-
-	echo "Do you want to install Applications? y/n"
+	echo "Do you want to install GUI Applications? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
 		brew tap phinze/homebrew-cask 2> /dev/null
@@ -95,10 +87,15 @@ function install_brews() {
 function install_brew() {
 	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 	echo
-	echo "ATTENTION: Since this is the first time homebrew is being installed,"
-	echo "we're going to run brew doctor for you. Run this script again after any issues are resolved."
+	echo "ATTENTION:"
+	echo "Since this is the first time homebrew is being installed, we're going to run brew doctor for you."
+	echo "Run this script again after any issues are resolved."
 	echo
-	sleep 5
+
+	for COUNT in {5..0}; do
+		echo -n "$COUNT "
+		sleep 1
+	done
 	brew doctor
 }
 
@@ -107,6 +104,23 @@ if [ $? -eq 0 ]; then
 	install_brews
 else
 	install_brew
+fi
+
+# Harp web server
+echo "Do you want to install harp? y/n"
+read RESPONSE
+if [[ "$RESPONSE" == "y" ]]; then
+	npm install harp -g 2> /dev/null
+	echo "Installed Harp"
+fi
+
+# Jekyll static site generator
+echo "Do you want to install jekyll? y/n"
+read RESPONSE
+if [[ "$RESPONSE" == "y" ]]; then
+	gem update 2> /dev/null
+	gem install jekyll 2> /dev/null
+	echo "Installed Jekyll"
 fi
 
 
