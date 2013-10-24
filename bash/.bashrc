@@ -38,7 +38,7 @@ if [ "$(uname -s)" == "Linux" ]; then
 else
 	alias ls='ls -G'
 	alias ll='ls -lhG'
-	alias subl='open -a "Sublime Text"'
+	alias subl='open -a "Sublime Text 2"'
 fi
 
 # Let's be polite.

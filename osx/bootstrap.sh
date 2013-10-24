@@ -64,7 +64,7 @@ function install_brews() {
 		echo "Do you want to install Google Chrome? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
-			brew cask install google-chrome-canary 2> /dev/null
+			brew cask install google-chrome 2> /dev/null
 			echo "Installed Google Chrome"
 		fi
 
@@ -113,16 +113,6 @@ if [[ "$RESPONSE" == "y" ]]; then
 	npm install harp -g 2> /dev/null
 	echo "Installed Harp"
 fi
-
-# Jekyll static site generator
-echo "Do you want to install jekyll? y/n"
-read RESPONSE
-if [[ "$RESPONSE" == "y" ]]; then
-	gem update 2> /dev/null
-	gem install jekyll 2> /dev/null
-	echo "Installed Jekyll"
-fi
-
 
 # Disable the sound effects on boot
 sudo nvram SystemAudioVolume=" "
