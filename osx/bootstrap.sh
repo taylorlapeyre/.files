@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-###### Installing important binaries ######
-
 function install_brews() {
 	brew update
 	brew upgrade
@@ -18,6 +16,13 @@ function install_brews() {
 	if [[ "$RESPONSE" == "y" ]]; then
 		brew install node 2> /dev/null
 		echo "Installed Node"
+	fi
+
+	echo "Do you want to install harp? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		npm install harp -g 2> /dev/null
+		echo "Installed Harp"
 	fi
 
 	echo "Do you want to install tig? y/n"
@@ -97,6 +102,7 @@ function install_brew() {
 		sleep 1
 	done
 	brew doctor
+	exit
 }
 
 hash brew &> /dev/null
@@ -104,14 +110,6 @@ if [ $? -eq 0 ]; then
 	install_brews
 else
 	install_brew
-fi
-
-# Harp web server
-echo "Do you want to install harp? y/n"
-read RESPONSE
-if [[ "$RESPONSE" == "y" ]]; then
-	npm install harp -g 2> /dev/null
-	echo "Installed Harp"
 fi
 
 # Disable the sound effects on boot
