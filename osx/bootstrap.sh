@@ -5,7 +5,7 @@ function install_brews() {
 	brew upgrade
 
 	echo
-	echo "Git is a distributed version control system."
+	echo "$(tput setaf 2)Git$(tput sgr0) is a distributed version control system."
 	echo "- Do you want to install git? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
@@ -14,7 +14,7 @@ function install_brews() {
 	fi
 
 	echo
-	echo "Tig is an ncurses-based text-mode interface for git."
+	echo "$(tput setaf 2)Tig$(tput sgr0) is an ncurses-based text-mode interface for git."
 	echo "- Do you want to install tig? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
@@ -23,7 +23,7 @@ function install_brews() {
 	fi
 
 	echo
-	echo "Node.js is a platform built on Chrome's JavaScript runtime."
+	echo "$(tput setaf 2)Node.js$(tput sgr0) is a platform built on Chrome's JavaScript runtime."
 	echo "- Do you want to install node? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
@@ -32,7 +32,7 @@ function install_brews() {
 	fi
 
 	echo
-	echo "Harp is a static web server with built-in preprocessing."
+	echo "$(tput setaf 2)Harp$(tput sgr0) is a static web server with built-in preprocessing."
 	echo "- Do you want to install harp? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
@@ -41,7 +41,7 @@ function install_brews() {
 	fi
 
 	echo
-	echo "GNU Stow is a useful utility for installing dotfiles."
+	echo "$(tput setaf 2)GNU Stow$(tput sgr0) is a useful utility for installing dotfiles."
 	echo "- Do you want to install stow?"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
@@ -58,7 +58,7 @@ function install_brews() {
 		brew install brew-cask 2> /dev/null
 
 		echo
-		echo "Sublime Text is a sophisticated text editor for code, markup and prose."
+		echo "$(tput setaf 2)Sublime Text$(tput sgr0) is a sophisticated text editor for code, markup and prose."
 		echo "- Do you want to install Sublime Text? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -67,7 +67,7 @@ function install_brews() {
 		fi
 
 		echo
-		echo "Dropbox is a cloud-based file hosting solution."
+		echo "$(tput setaf 2)Dropbox$(tput sgr0) is a cloud-based file hosting solution."
 		echo "- Do you want to install Dropbox? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -76,7 +76,7 @@ function install_brews() {
 		fi
 
 		echo
-		echo "Google Chrome is a popular and modern web browser."
+		echo "$(tput setaf 2)Google Chrome$(tput sgr0) is a popular and modern web browser."
 		echo "- Do you want to install Google Chrome? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -85,7 +85,7 @@ function install_brews() {
 		fi
 
 		echo
-		echo "VirtualBox is a virtualization platform for operating systems."
+		echo "$(tput setaf 2)Virtualbox$(tput sgr0) is a virtualization platform for operating systems."
 		echo "- Do you want to install Virtualbox? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -94,7 +94,7 @@ function install_brews() {
 		fi
 
 		echo
-		echo "Vagrant is a tool for building and distributing working environments."
+		echo "$(tput setaf 2)Vagrant$(tput sgr0) is a tool for building and distributing working environments."
 		echo "- Do you want to install Vagrant? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -103,7 +103,7 @@ function install_brews() {
 		fi
 
 		echo
-		echo "Rdio is an ad-free music subscription service."
+		echo "$(tput setaf 2)Rdio$(tput sgr0) is an ad-free music subscription service."
 		echo "- Do you want to install Rdio? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -112,7 +112,7 @@ function install_brews() {
 		fi
 
 		echo
-		echo "Alfred is an award-winning productivity application for Mac OS X."
+		echo "$(tput setaf 2)Alfred$(tput sgr0) is an award-winning productivity application for Mac OS X."
 		echo "- Do you want to install Alfred? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
@@ -154,7 +154,7 @@ function configure_settings() {
 function install_brew() {
 	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
 	echo
-	echo "ATTENTION:"
+	echo "A$(tput setaf 3)ATTENTION:$(tput sgr0)"
 	echo "Since this is the first time homebrew is being installed, I'm going to run brew doctor for you."
 	echo "Run this script again after any issues are resolved."
 	echo
