@@ -44,11 +44,9 @@ fi
 # Let's be polite.
 alias please='sudo '
 
-# Chruby, for switching rubies
-hash chruby-exec &> /dev/null
-if [ $? -eq 0 ]; then
-	source /usr/local/opt/chruby/share/chruby/chruby.sh
-	chruby ruby-2.0
+# RVM, for switching rubies
+if [ -d $HOME/.rvm ]; then
+	source $HOME/.rvm/scripts/rvm
 fi
 
 # A simple todo program that I made.

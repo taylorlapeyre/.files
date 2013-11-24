@@ -3,6 +3,7 @@
 	excludesfile = /Users/taylorlapeyre/.gitignore_global
 	quotepath = false
 	whitespace = trailing-space,space-before-tab
+	editor = /usr/bin/vim
 [user]
 	# Change these to your details
 	name = Taylor Lapeyre
