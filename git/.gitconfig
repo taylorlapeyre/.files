@@ -9,13 +9,13 @@
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
 [alias]
-	co = checkout
-	cm = "commit -m"
-	st = "status -sb"
-	br = "branch -r"
-	aa = "add --all :/"
-	rh = "reset --hard"
-	lg = "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+	co  = checkout
+	cm  = "commit -m"
+	st  = "status -sb"
+	br  = "branch -r"
+	aa  = "add --all :/"
+	rh  = "reset --hard"
+	gif = "fetch --prune"
 [format]
 	pretty = oneline
 [color]

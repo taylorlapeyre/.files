@@ -43,6 +43,7 @@ fi
 
 # Let's be polite.
 alias please='sudo '
+alias brake='bundle exec rake'
 
 # RVM, for switching rubies
 if [ -d $HOME/.rvm ]; then
@@ -71,3 +72,6 @@ function unmark {
 function marks {
 	ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
