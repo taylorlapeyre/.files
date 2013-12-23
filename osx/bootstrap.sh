@@ -112,6 +112,15 @@ function install_brews() {
 		fi
 
 		echo
+		echo "$(tput setaf 2)Steam$(tput sgr0) is a computer game and entertainment platform"
+		echo "- Do you want to install Steam? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install steam 2> /dev/null
+			echo "Installed Steam"
+		fi
+
+		echo
 		echo "$(tput setaf 2)Alfred$(tput sgr0) is an award-winning productivity application for Mac OS X."
 		echo "- Do you want to install Alfred? y/n"
 		read RESPONSE
