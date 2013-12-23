@@ -1,8 +1,4 @@
-if has("autocmd")
-	filetype off
-	filetype plugin indent on
-endif
-syntax on
+filetype off
 
 " Vundle setup
 set rtp+=~/.vim/bundle/vundle/
@@ -10,6 +6,10 @@ call vundle#rc()
 
 " Plugins
 Bundle 'kien/ctrlp.vim'
+Bundle 'kchmck/vim-coffee-script'
+
+syntax enable
+filetype plugin indent on
 
 let mapleader=","
 
