@@ -13,17 +13,15 @@ A firm understanding of Unix is recommended before installing them onto your sys
 
 #### Arch
 
-- window manager - [i3](http://i3wm.org/)
 - terminal - [urxvt-patched](https://aur.archlinux.org/packages/rxvt-unicode-patched/)
 - editor - [vim](http://www.vim.org/)
-- version control - [git](http://git-scm.com/)
 - browser - [Firefox](http://www.mozilla.org/en-US/firefox/new/)
 - launcher - [dmenu](http://tools.suckless.org/dmenu/)
+- window manager - [i3](http://i3wm.org/)
 
 #### OSX
 
 - terminal - [Terminal.app](http://www.apple.com/osx/apps/all.html#terminal)
 - editor - [Sublime Text](http://www.sublimetext.com/)
-- version control - [git](http://git-scm.com/)
-- browser - [Chrome Canary](https://www.google.com/intl/en/chrome/browser/canary.html)
+- browser - [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
 - launcher - [Alfred](http://www.alfredapp.com/)
