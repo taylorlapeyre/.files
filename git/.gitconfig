@@ -15,7 +15,7 @@
 	br  = "branch -r"
 	aa  = "add --all :/"
 	rh  = "reset --hard"
-	gif = "fetch --prune"
+	ap  = "add -p"
 [format]
 	pretty = oneline
 [color]
