@@ -1,4 +1,4 @@
-export PATH=$HOME/home/bin:$HOME/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH=$HOME/home/bin:$HOME/bin:$PATH
 
 # Show three directory levels deep before making the path more concise
 export PROMPT_DIRTRIM=3
@@ -55,6 +55,10 @@ hash tdo &> /dev/null
 if [ $? -eq 0 ]; then
 	tdo tasks
 fi
+
+# RVM
+export PATH=$HOME/home/bin:$HOME/bin:$PATH
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Credit: Jeroen Janssens
 function j { 
