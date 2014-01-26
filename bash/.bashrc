@@ -57,25 +57,8 @@ if [ $? -eq 0 ]; then
 	tdo tasks
 fi
 
-# RVM
-export PATH=$HOME/home/bin:$HOME/bin:$PATH
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Credit: Jeroen Janssens
-function j { 
-	cd -P $MARKPATH/$1 2>/dev/null || echo "No such mark: $1"
-}
-
-function mark { 
-	mkdir -p $MARKPATH; ln -s $(pwd) $MARKPATH/$1
-}
-
-function unmark { 
-	rm -i $MARKPATH/$1 
-}
-
-function marks {
-	ls -l $MARKPATH | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+function todo() {
+	touch ~/Desktop/"$*"
 }
 
 ### Added by the Heroku Toolbelt

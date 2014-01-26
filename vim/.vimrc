@@ -18,7 +18,7 @@ set nu
 
 " 256 colors, using DAS's wonderful GRB color scheme
 set t_Co=256
-color grb256
+color badwolf
 set background=dark
 
 " I like tabs. That's another story.
