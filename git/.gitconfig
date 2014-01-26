@@ -16,6 +16,7 @@
 	aa  = "add --all :/"
 	rh  = "reset --hard"
 	ap  = "add -p"
+	ss  = "stash save"
 [format]
 	pretty = oneline
 [color]
