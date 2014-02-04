@@ -85,6 +85,15 @@ function install_brews() {
 		fi
 
 		echo
+		echo "$(tput setaf 2)Skype$(tput sgr0) is a text, voice and video conferencing service."
+		echo "- Do you want to install Skype? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install skype 2> /dev/null
+			echo "Installed Skype"
+		fi
+
+		echo
 		echo "$(tput setaf 2)Virtualbox$(tput sgr0) is a virtualization platform for operating systems."
 		echo "- Do you want to install Virtualbox? y/n"
 		read RESPONSE
@@ -100,6 +109,15 @@ function install_brews() {
 		if [[ "$RESPONSE" == "y" ]]; then
 			brew cask install vagrant 2> /dev/null
 			echo "Installed Vagrant"
+		fi
+
+		echo
+		echo "$(tput setaf 2)Silverlight$(tput sgr0) is an awful browser plug-in required for watching Netflix."
+		echo "- Do you want to install Silverlight? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install silverlight 2> /dev/null
+			echo "Installed Silverlight"
 		fi
 
 		echo
@@ -157,7 +175,7 @@ function configure_settings() {
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
 		defaults write com.apple.terminal StringEncodings -array 4
-	fi	
+	fi
 }
 
 function install_brew() {

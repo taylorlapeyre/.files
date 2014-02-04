@@ -18,10 +18,11 @@ set nu
 
 " 256 colors, using DAS's wonderful GRB color scheme
 set t_Co=256
-color badwolf
+color grb256
 set background=dark
 
 " I like tabs. That's another story.
+set expandtab
 set tabstop=2
 set shiftwidth=2
 set autoindent
