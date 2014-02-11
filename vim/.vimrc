@@ -12,6 +12,7 @@ syntax enable
 filetype plugin indent on
 
 let mapleader=","
+inoremap jk <ESC>
 
 " I like seeing numbers
 set nu

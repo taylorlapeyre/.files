@@ -43,8 +43,12 @@ fi
 
 # Let's be polite.
 alias please='sudo '
-alias brake='bundle exec rake'
 alias branch='git branch | cut -c 3- | selecta | xargs git checkout'
+
+# Ruby stuff
+alias brake='bundle exec rake'
+alias spec='bundle exec rspec spec'
+alias bex='bundle exec'
 
 # RVM, for switching rubies
 if [ -d $HOME/.rvm ]; then
