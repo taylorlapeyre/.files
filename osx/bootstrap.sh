@@ -14,6 +14,15 @@ function install_brews() {
 	fi
 
 	echo
+	echo "$(tput setaf 2)Vim$(tput sgr0) is the de-facto Unix text editor."
+	echo "- Do you want to install vim? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		brew install vim 2> /dev/null
+		echo "Installed Vim"
+	fi
+
+	echo
 	echo "$(tput setaf 2)Tig$(tput sgr0) is an ncurses-based text-mode interface for git."
 	echo "- Do you want to install tig? y/n"
 	read RESPONSE
@@ -23,7 +32,7 @@ function install_brews() {
 	fi
 
 	echo
-	echo "$(tput setaf 2)Node.js$(tput sgr0) is a platform built on Chrome's JavaScript runtime."
+	echo "$(tput setaf 2)Node$(tput sgr0) is a platform built on Chrome's JavaScript runtime."
 	echo "- Do you want to install node? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
@@ -31,16 +40,16 @@ function install_brews() {
 		echo "Installed Node"
 	fi
 
-	echo
-	echo "$(tput setaf 2)Harp$(tput sgr0) is a static web server with built-in preprocessing."
-	echo "- Do you want to install harp? y/n"
-	read RESPONSE
-	if [[ "$RESPONSE" == "y" ]]; then
-		npm install harp -g 2> /dev/null
-		echo "Installed Harp"
-	fi
+  echo
+  echo "$(tput setaf 2)Python$(tput sgr0) is probably out of date." 
+  echo "- Do you want the most recent version? y/n"
+  read RESPONSE
+  if [[ "$RESPONSE" == "y" ]]; then
+    brew install python 2> /dev/null
+    echo "Updated Python"
+  fi
 
-	echo
+  echo 
 	echo "$(tput setaf 2)GNU Stow$(tput sgr0) is a useful utility for installing dotfiles."
 	echo "- Do you want to install stow?"
 	read RESPONSE
@@ -199,6 +208,7 @@ if [ $? -eq 0 ]; then
 	install_brews
 	echo
 	echo "All applications have been installed!"
+  echo "You'll probably want to edit /etc/paths to put /usr/local/bin first."
 	echo
 	configure_settings
 

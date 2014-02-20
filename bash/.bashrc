@@ -38,7 +38,7 @@ if [ "$(uname -s)" == "Linux" ]; then
 else
 	alias ls='ls -G'
 	alias ll='ls -lhG'
-	alias subl='open -a "Sublime Text 2"'
+	alias subl='open -a "Sublime Text"'
 fi
 
 # Let's be polite.
@@ -48,7 +48,12 @@ alias branch='git branch | cut -c 3- | selecta | xargs git checkout'
 # Ruby stuff
 alias brake='bundle exec rake'
 alias spec='bundle exec rspec spec'
-alias bex='bundle exec'
+
+# Everlane stuff
+alias evertest='bundle exec bin/rspec spec'
+alias everconsole='bundle exec bin/rails c'
+alias everserver='bundle exec bin/rails s'
+alias everrake='bundle exec bin/rake'
 
 # RVM, for switching rubies
 if [ -d $HOME/.rvm ]; then
