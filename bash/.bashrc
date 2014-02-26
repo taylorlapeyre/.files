@@ -8,6 +8,7 @@ export MARKPATH=$HOME/.marks
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 export TERM='xterm-color'
+export EDITOR='vi'
 
 # History is good.
 export HISTSIZE=10000
@@ -45,10 +46,6 @@ fi
 alias please='sudo '
 alias branch='git branch | cut -c 3- | selecta | xargs git checkout'
 
-# Ruby stuff
-alias brake='bundle exec rake'
-alias spec='bundle exec rspec spec'
-
 # Everlane stuff
 alias evertest='bundle exec bin/rspec spec'
 alias everconsole='bundle exec bin/rails c'
@@ -58,12 +55,6 @@ alias everrake='bundle exec bin/rake'
 # RVM, for switching rubies
 if [ -d $HOME/.rvm ]; then
 	source $HOME/.rvm/scripts/rvm
-fi
-
-# A simple todo program that I made.
-hash tdo &> /dev/null
-if [ $? -eq 0 ]; then
-	tdo tasks
 fi
 
 function todo() {

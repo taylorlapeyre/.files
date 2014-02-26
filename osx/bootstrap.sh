@@ -103,12 +103,12 @@ function install_brews() {
 		fi
 
 		echo
-		echo "$(tput setaf 2)Virtualbox$(tput sgr0) is a virtualization platform for operating systems."
-		echo "- Do you want to install Virtualbox? y/n"
+		echo "$(tput setaf 2)Screenhero$(tput sgr0) is screen sharing made for remote developers"
+		echo "- Do you want to install Screenhero? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
-			brew cask install virtualbox 2> /dev/null
-			echo "Installed Virtualbox"
+			brew cask install screenhero 2> /dev/null
+			echo "Installed Screenhero"
 		fi
 
 		echo
@@ -116,6 +116,7 @@ function install_brews() {
 		echo "- Do you want to install Vagrant? y/n"
 		read RESPONSE
 		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install virtualbox 2> /dev/null
 			brew cask install vagrant 2> /dev/null
 			echo "Installed Vagrant"
 		fi
