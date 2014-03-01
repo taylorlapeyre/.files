@@ -40,6 +40,16 @@ function install_brews() {
 		echo "Installed Node"
 	fi
 
+	echo
+	echo "$(tput setaf 2)Keybase$(tput sgr0) is a public directory of publicly auditable public keys"
+	echo "- Do you want to install keybase? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+    npm install -g keybase-installer 2> /dev/null
+		echo "Installed Keybase"
+	fi
+
+
   echo
   echo "$(tput setaf 2)Python$(tput sgr0) is probably out of date." 
   echo "- Do you want to get the most recent version? y/n"
