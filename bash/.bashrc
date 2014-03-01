@@ -54,6 +54,7 @@ alias everrake='bundle exec bin/rake'
 
 # chruby
 source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
 
 function todo() {
 	touch ~/Desktop/"$*"
