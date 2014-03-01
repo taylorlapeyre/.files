@@ -138,6 +138,16 @@ function install_brews() {
 			brew cask install alfred 2> /dev/null
 			echo "Installed Alfred"
 		fi
+
+		echo
+		echo "$(tput setaf 2)Notational Velocity$(tput sgr0) is a fast and lightweight note taking application."
+		echo "- Do you want to install Notational Velocity? y/n"
+		read RESPONSE
+		if [[ "$RESPONSE" == "y" ]]; then
+			brew cask install nvalt 2> /dev/null
+			echo "Installed Notational Velocity"
+		fi
+	fi
 	fi
 }
 
