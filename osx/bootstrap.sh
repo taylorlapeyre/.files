@@ -170,7 +170,6 @@ function install_brews() {
 			echo "Installed Notational Velocity"
 		fi
 	fi
-	fi
 }
 
 function configure_settings() {
@@ -203,7 +202,7 @@ function configure_settings() {
 }
 
 function install_brew() {
-	ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"
+	ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
 	echo
 	echo "A$(tput setaf 3)ATTENTION:$(tput sgr0)"
 	echo "Since this is the first time homebrew is being installed, I'm going to run brew doctor for you."
