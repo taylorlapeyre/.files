@@ -17,7 +17,6 @@ export HISTCONTROL=erasedups
 shopt -s cdspell
 shopt -s hostcomplete
 shopt -s nocaseglob
-shopt -s globstar
 
 # Let me know if I'm on a remote host. Format: "username: ~/path $ "
 if [ -z "$SSH_CLIENT" ]; then
@@ -55,6 +54,7 @@ alias everrake='bundle exec bin/rake'
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
+chruby 2.1.1
 
 function todo() {
 	touch ~/Desktop/"$*"
