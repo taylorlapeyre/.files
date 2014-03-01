@@ -3,6 +3,7 @@
 function install_brews() {
 	brew update
 	brew upgrade
+  brew install libtool libxslt libksba openssl libyaml 2> /dev/null
 
 	echo
 	echo "$(tput setaf 2)Git$(tput sgr0) is a distributed version control system."
