@@ -6,7 +6,7 @@ function install_brews() {
 
 	echo
 	echo "$(tput setaf 2)Git$(tput sgr0) is a distributed version control system."
-	echo "- Do you want to install git? y/n"
+	echo "- Do you want to uprade git? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
 		brew install git 2> /dev/null
@@ -15,7 +15,7 @@ function install_brews() {
 
 	echo
 	echo "$(tput setaf 2)Vim$(tput sgr0) is the de-facto Unix text editor."
-	echo "- Do you want to install vim? y/n"
+	echo "- Do you want to upgrade vim? y/n"
 	read RESPONSE
 	if [[ "$RESPONSE" == "y" ]]; then
 		brew install vim 2> /dev/null
@@ -42,7 +42,7 @@ function install_brews() {
 
   echo
   echo "$(tput setaf 2)Python$(tput sgr0) is probably out of date." 
-  echo "- Do you want the most recent version? y/n"
+  echo "- Do you want to get the most recent version? y/n"
   read RESPONSE
   if [[ "$RESPONSE" == "y" ]]; then
     brew install python 2> /dev/null
@@ -94,15 +94,6 @@ function install_brews() {
 		fi
 
 		echo
-		echo "$(tput setaf 2)Skype$(tput sgr0) is a text, voice and video conferencing service."
-		echo "- Do you want to install Skype? y/n"
-		read RESPONSE
-		if [[ "$RESPONSE" == "y" ]]; then
-			brew cask install skype 2> /dev/null
-			echo "Installed Skype"
-		fi
-
-		echo
 		echo "$(tput setaf 2)Screenhero$(tput sgr0) is screen sharing made for remote developers"
 		echo "- Do you want to install Screenhero? y/n"
 		read RESPONSE
@@ -137,15 +128,6 @@ function install_brews() {
 		if [[ "$RESPONSE" == "y" ]]; then
 			brew cask install rdio 2> /dev/null
 			echo "Installed Rdio"
-		fi
-
-		echo
-		echo "$(tput setaf 2)Steam$(tput sgr0) is a computer game and entertainment platform"
-		echo "- Do you want to install Steam? y/n"
-		read RESPONSE
-		if [[ "$RESPONSE" == "y" ]]; then
-			brew cask install steam 2> /dev/null
-			echo "Installed Steam"
 		fi
 
 		echo

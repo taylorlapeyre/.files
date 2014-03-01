@@ -22,6 +22,6 @@ A firm understanding of Unix is recommended before installing them onto your sys
 #### OSX
 
 - terminal - [Terminal.app](http://www.apple.com/osx/apps/all.html#terminal)
-- editor - [Sublime Text](http://www.sublimetext.com/)
-- browser - [Google Chrome](https://www.google.com/intl/en/chrome/browser/)
+- editor - [Atom](http://atom.io)
+- browser - [Google Chrome](https://www.google.com/chrome)
 - launcher - [Alfred](http://www.alfredapp.com/)
