@@ -52,7 +52,7 @@ function install_brews() {
 
 
   echo
-  echo "$(tput setaf 2)Python$(tput sgr0) is probably out of date." 
+	echo "$(tput setaf 2)Python$(tput sgr0) is probably out of date."
   echo "- Do you want to get the most recent version? y/n"
   read RESPONSE
   if [[ "$RESPONSE" == "y" ]]; then
@@ -60,7 +60,18 @@ function install_brews() {
     echo "Updated Python"
   fi
 
-  echo 
+	echo
+	echo "It's generally a bad idea to use the system ruby."
+	echo "$(tput setaf 2)chruby$(tput sgr0) is a good way to manage ruby."
+	echo "- Do you want to use chruby? y/n"
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		brew install chruby 2> /dev/null
+		brew install ruby-install 2> /dev/null
+		echo "Installed chruby"
+	fi
+
+	echo
 	echo "$(tput setaf 2)GNU Stow$(tput sgr0) is a useful utility for installing dotfiles."
 	echo "- Do you want to install stow?"
 	read RESPONSE
@@ -219,4 +230,3 @@ if [ $? -eq 0 ]; then
 else
 	install_brew
 fi
-

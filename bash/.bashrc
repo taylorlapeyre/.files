@@ -52,10 +52,8 @@ alias everconsole='bundle exec bin/rails c'
 alias everserver='bundle exec bin/rails s'
 alias everrake='bundle exec bin/rake'
 
-# RVM, for switching rubies
-if [ -d $HOME/.rvm ]; then
-	source $HOME/.rvm/scripts/rvm
-fi
+# chruby
+source /usr/local/share/chruby/chruby.sh
 
 function todo() {
 	touch ~/Desktop/"$*"
