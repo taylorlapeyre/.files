@@ -17,6 +17,7 @@
 	rh  = "reset --hard"
 	ap  = "add -p"
 	ss  = "stash save"
+  nuke = "!git clean -fd && git reset --hard"
 [format]
 	pretty = oneline
 [color]
