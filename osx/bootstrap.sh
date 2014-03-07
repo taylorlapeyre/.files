@@ -1,93 +1,47 @@
 #!/usr/bin/env bash
 
 function install_brews() {
-  brew update
-  brew upgrade
-  echo
-  echo "There are some basic C libraries for development that we think you should have."
-  echo "These libraries and utilites are:"
-  echo "$(tput setaf 2)libtool, libxslt, libksba, libyaml, and openssl$(tput sgr0)"
-  echo "- Do you want to install these? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-      brew install libtool libxslt libksba openssl libyaml 2> /dev/null
-    echo "Installed basic libraries"
-  fi
+	echo "I'm going to update homebrew's packages. Type 'ok' to continue."
+	read RESPONSE
+	if [[ "$RESPONSE" == "ok" ]]; then
+		brew update
+		brew upgrade
+	else
+		exit
+	fi
 
-  echo
-  echo "$(tput setaf 2)Git$(tput sgr0) is a distributed version control system."
-  echo "- Do you want to uprade git? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install git 2> /dev/null
-    echo "Installed Git"
-  fi
+  brew_install() {
+    echo
+    echo "${*:2}"
+    echo "- Do you want to install $(tput setaf 2)$1$(tput sgr0)? y/n"
+    read RESPONSE
+    if [[ "$RESPONSE" == "y" ]]; then
+        brew install $1 2> /dev/null
+      echo "Installed $1"
+    fi
+  }
 
-  echo
-  echo "$(tput setaf 2)Vim$(tput sgr0) is the de-facto Unix text editor."
-  echo "- Do you want to upgrade vim? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install vim 2> /dev/null
-    echo "Installed Vim"
-  fi
+	brew_install "libtool libxslt libksba openssl libyaml" \
+	"There are some basic C libraries for development that I think you should have."
 
-  echo
-  echo "$(tput setaf 2)Tig$(tput sgr0) is an ncurses-based text-mode interface for git."
-  echo "- Do you want to install tig? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install tig 2> /dev/null
-    echo "Installed Tig"
-  fi
+	brew_install "git" \
+	"Git is a distributed version control system."
 
-  echo
-  echo "$(tput setaf 2)Node$(tput sgr0) is a platform built on Chrome's JavaScript runtime."
-  echo "- Do you want to install node? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install node 2> /dev/null
-    echo "Installed Node"
-  fi
+	brew_install "vim" \
+	"Vim is the de-facto Unix text editor."
 
-  echo
-  echo "$(tput setaf 2)Keybase$(tput sgr0) is a public directory of publicly auditable public keys"
-  echo "- Do you want to install keybase? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    npm install -g keybase-installer 2> /dev/null
-    echo "Installed Keybase"
-  fi
+	brew_install "node" \
+	"Node is a platform built on Chrome's JavaScript runtime."
 
+	brew_install "python" \
+	"Python is probably out of date."
 
-  echo
-  echo "$(tput setaf 2)Python$(tput sgr0) is probably out of date."
-  echo "- Do you want to get the most recent version? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install python 2> /dev/null
-    echo "Updated Python"
-  fi
+	brew_install "chruby ruby-install" \
+	"It's generally a bad idea to use the system ruby. \n" \
+	"chruby is a good way to manage ruby."
 
-  echo
-  echo "It's generally a bad idea to use the system ruby."
-  echo "$(tput setaf 2)chruby$(tput sgr0) is a good way to manage ruby."
-  echo "- Do you want to use chruby? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install chruby 2> /dev/null
-    brew install ruby-install 2> /dev/null
-    echo "Installed chruby"
-  fi
-
-  echo
-  echo "$(tput setaf 2)GNU Stow$(tput sgr0) is a useful utility for installing dotfiles."
-  echo "- Do you want to install stow?"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    brew install stow 2> /dev/null
-    echo "Installed Stow"
-  fi
+	brew_install "stow" \
+	"GNU Stow is a useful utility for installing dotfiles."
 
   echo
   echo "This script can install GUI-based user applications, such as Google Chrome."
@@ -97,87 +51,43 @@ function install_brews() {
     brew tap phinze/homebrew-cask 2> /dev/null
     brew install brew-cask 2> /dev/null
 
-    echo
-    echo "$(tput setaf 2)Sublime Text$(tput sgr0) is a sophisticated text editor for code, markup and prose."
-    echo "- Do you want to install Sublime Text? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install sublime-text 2> /dev/null
-      echo "Installed Sublime Text"
-    fi
+		brew_cask_install() {
+			echo
+			echo "${*:2}"
+			echo "- Do you want to install $(tput setaf 2)$1$(tput sgr0)? y/n"
+			read RESPONSE
+			if [[ "$RESPONSE" == "y" ]]; then
+					brew cask install $1 2> /dev/null
+				echo "Installed $1"
+			fi
+		}
 
-    echo
-    echo "$(tput setaf 2)Dropbox$(tput sgr0) is a cloud-based file hosting solution."
-    echo "- Do you want to install Dropbox? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install dropbox 2> /dev/null
-      echo "Installed Dropbox"
-    fi
+		brew_cask_install "sublime-text" \
+		"Sublime Text is a sophisticated text editor for code, markup and prose."
 
-    echo
-    echo "$(tput setaf 2)Google Chrome$(tput sgr0) is a popular and modern web browser."
-    echo "- Do you want to install Google Chrome? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install google-chrome 2> /dev/null
-      echo "Installed Google Chrome"
-    fi
+		brew_cask_install "dropbox" \
+		"Dropbox is a cloud-based file hosting solution."
 
-    echo
-    echo "$(tput setaf 2)Screenhero$(tput sgr0) is screen sharing made for remote developers"
-    echo "- Do you want to install Screenhero? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install screenhero 2> /dev/null
-      echo "Installed Screenhero"
-    fi
+		brew_cask_install "google-chrome" \
+		"Google Chrome is a popular and modern web browser."
 
-    echo
-    echo "$(tput setaf 2)Vagrant$(tput sgr0) is a tool for building and distributing working environments."
-    echo "- Do you want to install Vagrant? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install virtualbox 2> /dev/null
-      brew cask install vagrant 2> /dev/null
-      echo "Installed Vagrant"
-    fi
+		brew_cask_install "screenhero" \
+		"Screenhero is screen sharing made for remote developers"
 
-    echo
-    echo "$(tput setaf 2)Silverlight$(tput sgr0) is an awful browser plug-in required for watching Netflix."
-    echo "- Do you want to install Silverlight? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install silverlight 2> /dev/null
-      echo "Installed Silverlight"
-    fi
+		brew_cask_install "virtualbox vagrant" \
+		"Vagrant is a tool for building and distributing working environments."
 
-    echo
-    echo "$(tput setaf 2)Rdio$(tput sgr0) is an ad-free music subscription service."
-    echo "- Do you want to install Rdio? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install rdio 2> /dev/null
-      echo "Installed Rdio"
-    fi
+		brew_cask_install "silverlight" \
+		"Silverlight is an awful browser plug-in required for watching Netflix."
 
-    echo
-    echo "$(tput setaf 2)Alfred$(tput sgr0) is an award-winning productivity application for Mac OS X."
-    echo "- Do you want to install Alfred? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install alfred 2> /dev/null
-      echo "Installed Alfred"
-    fi
+		brew_cask_install "rdio" \
+		"Rdio is an ad-free music subscription service."
 
-    echo
-    echo "$(tput setaf 2)Notational Velocity$(tput sgr0) is a fast and lightweight note taking application."
-    echo "- Do you want to install Notational Velocity? y/n"
-    read RESPONSE
-    if [[ "$RESPONSE" == "y" ]]; then
-      brew cask install nvalt 2> /dev/null
-      echo "Installed Notational Velocity"
-    fi
+		brew_cask_install "alfred" \
+		"Alfred is an award-winning productivity application for Mac OS X."
+
+		brew_cask_install "nvalt" \
+		"Notational Velocity is a fast and lightweight note taking application."
   fi
 }
 
@@ -189,20 +99,6 @@ function configure_settings() {
   fi
 
   echo
-  echo "- Do you want to disable the “Are you sure you want to open this application?” dialog? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    defaults write com.apple.LaunchServices LSQuarantine -bool false
-  fi
-
-  echo
-  echo "- Do you want to use list view in all Finder windows by default? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-  fi
-
-  echo
   echo "- Do you want to only use UTF-8 in Terminal.app? y/n"
   read RESPONSE
   if [[ "$RESPONSE" == "y" ]]; then
@@ -211,13 +107,22 @@ function configure_settings() {
 }
 
 function install_brew() {
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+	echo
+	echo "Looks like you're brand new! Welcome to this bootstrap script."
+	echo "I'm not going to install anything onto your system without your explicit permission."
+	echo "furthermore, the only way I will install things is via homebrew."
+	echo "First things first, I'm going to install $(tput setaf 2)homebrew$(tput sgr0)."
+	echo "Type 'ok' to continue."
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+	fi
   echo
   echo "A$(tput setaf 3)ATTENTION:$(tput sgr0)"
   echo "Since this is the first time homebrew is being installed, I'm going to run brew doctor for you."
   echo "Run this script again after any issues are resolved."
   echo
-
+s
   for COUNT in {5..0}; do
     echo -n "$COUNT "
     sleep 1
@@ -225,7 +130,7 @@ function install_brew() {
   brew doctor
   echo
   echo "Message from the script:"
-  echo "You'll probably want to edit $(tput setaf 3)/etc/paths$(tput sgr0) to put $(tput sgr3)/usr/local/bin$(tput sgr0) first."
+  echo "You'll probably want to edit $(tput setaf 3)/etc/paths$(tput sgr0) to put $(tput setaf 3)/usr/local/bin$(tput sgr0) first."
   echo
   exit
 }
