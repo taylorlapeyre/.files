@@ -1,5 +1,34 @@
 #!/usr/bin/env bash
 
+function install_brew() {
+	echo
+	echo "Looks like you're brand new! Welcome to this bootstrap script."
+	echo "I'm not going to install anything onto your system without your explicit permission."
+	echo "furthermore, the only way I will install things is via homebrew."
+	echo "First things first, I'm going to install $(tput setaf 2)homebrew$(tput sgr0)."
+	echo "Type 'ok' to continue."
+	read RESPONSE
+	if [[ "$RESPONSE" == "y" ]]; then
+		ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+	fi
+	echo
+	echo "A$(tput setaf 3)ATTENTION:$(tput sgr0)"
+	echo "Since this is the first time homebrew is being installed, I'm going to run brew doctor for you."
+	echo "Run this script again after any issues are resolved. Running brew doctor in..."
+	echo
+	for COUNT in {5..0}; do
+		echo -n "$COUNT "
+		sleep 1
+	done
+	brew doctor
+	echo
+	echo "Message from the script:"
+	echo "You'll especially want to edit $(tput setaf 3)/etc/paths$(tput sgr0) to put $(tput setaf 3)/usr/local/bin$(tput sgr0) first."
+	echo
+	exit
+}
+
+
 function install_brews() {
   echo "I'm going to update homebrew's packages. Type 'ok' to continue."
   read RESPONSE
@@ -91,6 +120,7 @@ function install_brews() {
   fi
 }
 
+
 function configure_settings() {
   echo "- Do you want to disable the sound effects on boot? y/n"
   read RESPONSE
@@ -106,33 +136,6 @@ function configure_settings() {
   fi
 }
 
-function install_brew() {
-  echo
-  echo "Looks like you're brand new! Welcome to this bootstrap script."
-  echo "I'm not going to install anything onto your system without your explicit permission."
-  echo "furthermore, the only way I will install things is via homebrew."
-  echo "First things first, I'm going to install $(tput setaf 2)homebrew$(tput sgr0)."
-  echo "Type 'ok' to continue."
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
-  fi
-  echo
-  echo "A$(tput setaf 3)ATTENTION:$(tput sgr0)"
-  echo "Since this is the first time homebrew is being installed, I'm going to run brew doctor for you."
-  echo "Run this script again after any issues are resolved. Running brew doctor in..."
-  echo
-  for COUNT in {5..0}; do
-    echo -n "$COUNT "
-    sleep 1
-  done
-  brew doctor
-  echo
-  echo "Message from the script:"
-  echo "You'll especially want to edit $(tput setaf 3)/etc/paths$(tput sgr0) to put $(tput setaf 3)/usr/local/bin$(tput sgr0) first."
-  echo
-  exit
-}
 
 hash brew &> /dev/null
 if [ $? -eq 0 ]; then
