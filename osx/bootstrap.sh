@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+install_command="brew install"
 
 function install_brew() {
   echo
@@ -45,7 +46,7 @@ function install_brews() {
     echo "- Do you want to install $(tput setaf 2)$1$(tput sgr0)? y/n"
     read RESPONSE
     if [[ "$RESPONSE" == "y" ]]; then
-        brew install $1 2> /dev/null
+      $install_command $1 2> /dev/null
       echo "Installed $1"
     fi
   }
@@ -79,17 +80,7 @@ function install_brews() {
   if [[ "$RESPONSE" == "y" ]]; then
     brew tap phinze/homebrew-cask 2> /dev/null
     brew install brew-cask 2> /dev/null
-
-    o() {
-      echo
-      echo "${*:2}"
-      echo "- Do you want to install $(tput setaf 2)$1$(tput sgr0)? y/n"
-      read RESPONSE
-      if [[ "$RESPONSE" == "y" ]]; then
-          brew cask install $1 2> /dev/null
-        echo "Installed $1"
-      fi
-    }
+    install_command="brew cask install"
 
     o "sublime-text" \
       "Sublime Text is a sophisticated text editor for code, markup and prose."
