@@ -9,7 +9,7 @@ function install_brew() {
   echo "First things first, I'm going to install $(tput setaf 2)homebrew$(tput sgr0)."
   echo "Type 'ok' to continue."
   read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
+  if [[ "$RESPONSE" == "ok" ]]; then
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   fi
   echo
