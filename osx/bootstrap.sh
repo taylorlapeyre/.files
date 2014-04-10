@@ -92,6 +92,9 @@ function install_brews() {
     o "screenhero" \
       "Screenhero is screen sharing made for remote developers"
 
+    o "macaw" \
+      "Macaw us a code-savvy WYSIWYG web design tool"
+
     o "virtualbox vagrant" \
       "Vagrant is a tool for building and distributing working environments."
 
