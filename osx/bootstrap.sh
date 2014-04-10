@@ -104,8 +104,8 @@ function install_brews() {
     o "alfred" \
       "Alfred is an award-winning productivity application for Mac OS X."
 
-    o "nvalt" \
-      "Notational Velocity is a fast and lightweight note taking application."
+    o "evernote" \
+      "Evernote is a popular multi-platform note taking application"
   fi
 }
 
