@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/home/taylor/desk/sparehanger-vagrant/sparehanger/sparehanger/protected'
-let g:netrw_dirhist_2='/home/taylor/desk/sparehanger-vagrant/sparehanger/sparehanger/protected/views'
-let g:netrw_dirhist_3='/home/taylor/desk/sparehanger-vagrant/sparehanger/sparehanger/protected/views/site'

@@ -5,33 +5,31 @@ function install_brew() {
   echo
   echo "Looks like you're brand new! Welcome to this bootstrap script."
   echo "I'm not going to install anything onto your system without your explicit permission."
-  echo "furthermore, the only way I will install things is via homebrew."
+  echo "furthermore, the only way I will install things is via '$install_command'."
+  echo
   echo "First things first, I'm going to install $(tput setaf 2)homebrew$(tput sgr0)."
   echo "Type 'ok' to continue."
+
   read RESPONSE
   if [[ "$RESPONSE" == "ok" ]]; then
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
   fi
+
   echo
-  echo "A$(tput setaf 3)ATTENTION:$(tput sgr0)"
-  echo "Since this is the first time homebrew is being installed, I'm going to run brew doctor for you."
-  echo "Run this script again after any issues are resolved. Running brew doctor in..."
+  echo "$(tput setaf 3)ATTENTION:$(tput sgr0)"
+  echo "Since this is the first time homebrew is being installed, I'm going to give you a chance to correct anything that might have gone ary while installing homebrew. $(tput setaf 3)brew doctor$(tput sgr0) may be useful."
+  echo "Run this script again after any issues are resolved."
   echo
-  for COUNT in {5..0}; do
-    echo -n "$COUNT "
-    sleep 1
-  done
-  brew doctor
-  echo
-  echo "Message from the script:"
-  echo "You'll especially want to edit $(tput setaf 3)/etc/paths$(tput sgr0) to put $(tput setaf 3)/usr/local/bin$(tput sgr0) first."
+  echo "Pro Tips:"
+  echo "- You'll probably want to edit $(tput setaf 3)/etc/paths$(tput sgr0) to put $(tput setaf 3)/usr/local/bin$(tput sgr0) first."
+  echo "- You can install the most recent Xcode command line tools via: $(tput setaf 3)xcode-select --install$(tput sgr0)"
   echo
   exit
 }
 
 
 function install_brews() {
-  echo "I'm going to update homebrew's packages. Type 'ok' to continue."
+  echo "Hello! First, I'm going to update homebrew's packages. Type 'ok' to continue."
   read RESPONSE
   if [[ "$RESPONSE" == "ok" ]]; then
     brew update
@@ -133,7 +131,7 @@ if [ $? -eq 0 ]; then
   install_brews
   configure_settings
   echo
-  echo "All applications have been installed! See you around."
+  echo "All applications have been installed. See you around!"
 else
   install_brew
 fi

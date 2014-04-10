@@ -1,0 +1,6 @@
+1. brew install chruby ruby-install
+2. ruby-install ruby
+3. exec $SHELL
+4. which gem
+5. gem install bundler
+
