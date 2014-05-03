@@ -22,7 +22,7 @@ set t_Co=256
 color grb256
 set background=dark
 
-" I like tabs. That's another story.
+" Spaces, not tabs.
 set expandtab
 set tabstop=2
 set shiftwidth=2
@@ -60,16 +60,3 @@ map <Left> <Nop>
 map <Right> <Nop>
 map <Up> <Nop>
 map <Down> <Nop>
-
-" Smart line numbers. Relative when in normal mode.
-if has("relativenumber")
-	set relativenumber
-	au BufEnter * :set rnu
-	au BufLeave * :set nu
-	au WinEnter * :set rnu
-	au WinLeave * :set nu
-	au InsertEnter * :set nu
-	au InsertLeave * :set rnu
-	au FocusLost * :set nu
-	au FocusGained * :set rnu
-endif

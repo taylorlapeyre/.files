@@ -1,8 +1,7 @@
-export PATH=$HOME/home/bin:$HOME/bin:$PATH
+export PATH=$HOME/bin:$PATH
 
 # Show three directory levels deep before making the path more concise
 export PROMPT_DIRTRIM=3
-export MARKPATH=$HOME/.marks
 
 # Color is good.
 export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
@@ -15,7 +14,6 @@ export HISTSIZE=10000
 export HISTCONTROL=erasedups
 
 shopt -s cdspell
-shopt -s hostcomplete
 shopt -s nocaseglob
 
 # Let me know if I'm on a remote host. Format: "username: ~/path $ "
@@ -25,9 +23,7 @@ else
 	export PS1="($(hostname)) \u: \[$(tput setaf 3)\]\w\[$(tput sgr0)\] $ "
 fi
 
-if [[ -f $HOME/.bash_aliases ]]; then
-	source $HOME/.bash_aliases
-fi
+[[ -f $HOME/.bash_aliases ]] && . $HOME/.bash_aliases
 
 # Aliases, seperated between Linux and OSX systems
 if [ "$(uname -s)" == "Linux" ]; then
@@ -38,18 +34,16 @@ if [ "$(uname -s)" == "Linux" ]; then
 else
 	alias ls='ls -G'
 	alias ll='ls -lhG'
-	alias subl='open -a "Sublime Text"'
 fi
 
 # Let's be polite.
 alias please='sudo '
-alias branch='git branch | cut -c 3- | selecta | xargs git checkout'
 
-# Everlane stuff
-alias evertest='bundle exec bin/rspec spec'
-alias everconsole='bundle exec bin/rails c'
-alias everserver='bundle exec bin/rails s'
-alias everrake='bundle exec bin/rake'
+# Rails stuff
+alias rtest='bundle exec bin/rspec spec'
+alias rconsole='bundle exec bin/rails c'
+alias rserver='bundle exec bin/rails s'
+alias rrake='bundle exec bin/rake'
 
 # chruby
 source /usr/local/share/chruby/chruby.sh
