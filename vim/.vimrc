@@ -7,15 +7,19 @@ call vundle#rc()
 " Plugins
 Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'tpope/vim-rails'
 
 syntax enable
 filetype plugin indent on
 
+let g:vim_markdown_folding_disabled=1
 let mapleader=","
 inoremap jk <ESC>
 
 " I like seeing numbers
 set nu
+set rnu
 
 " 256 colors, using DAS's wonderful GRB color scheme
 set t_Co=256
