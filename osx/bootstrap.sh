@@ -107,8 +107,8 @@ function install_brews() {
     o "alfred" \
       "Alfred is an award-winning productivity application for Mac OS X."
 
-    o "evernote" \
-      "Evernote is a popular multi-platform note taking application"
+    o "slack" \
+      "Slack is a real-time team communication system."
   fi
 }
 
