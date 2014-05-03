@@ -71,6 +71,9 @@ function install_brews() {
   o "stow" \
     "GNU Stow is a useful utility for installing dotfiles."
 
+  o "heroku-toolbelt" \
+    "The Heroku Toolbelt is used for accessing the Heroku platform."
+
   echo
   echo "This script can install GUI-based user applications, such as Google Chrome."
   echo "- Do you want to install GUI Applications? y/n"
