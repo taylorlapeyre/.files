@@ -16,4 +16,4 @@ I recommend using [Atom][atom] as your primary editor, [Google Chrome][chrome] a
 [bash]: http://www.gnu.org/software/bash/
 [atom]: http://atom.io
 [chrome]: https://google.com/chrome
-[bs]: /osx/boostrap.sh
+[bs]: /osx/bootstrap.sh
