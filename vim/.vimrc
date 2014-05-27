@@ -7,6 +7,7 @@ call vundle#rc()
 " Plugins
 Bundle 'kien/ctrlp.vim'
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'tpope/vim-rails'
 
