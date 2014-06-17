@@ -48,7 +48,7 @@ alias rrake='bundle exec bin/rake'
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.1.1
+chruby 2.1.2
 
 function todo() {
 	touch ~/Desktop/"$*"

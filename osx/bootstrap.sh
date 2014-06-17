@@ -83,8 +83,8 @@ function install_brews() {
     brew install brew-cask 2> /dev/null
     install_command="brew cask install"
 
-    o "sublime-text" \
-      "Sublime Text is a sophisticated text editor for code, markup and prose."
+    o "atom" \
+      "Atom is a hackable text editor for the 21st century."
 
     o "dropbox" \
       "Dropbox is a cloud-based file hosting solution."
@@ -95,9 +95,6 @@ function install_brews() {
     o "screenhero" \
       "Screenhero is screen sharing made for remote developers"
 
-    o "macaw" \
-      "Macaw us a code-savvy WYSIWYG web design tool"
-
     o "virtualbox vagrant" \
       "Vagrant is a tool for building and distributing working environments."
 
@@ -107,8 +104,8 @@ function install_brews() {
     o "rdio" \
       "Rdio is an ad-free music subscription service."
 
-    o "alfred" \
-      "Alfred is an award-winning productivity application for Mac OS X."
+    o "skype" \
+      "Skype is a popular video conferencing application."
 
     o "slack" \
       "Slack is a real-time team communication system."
