@@ -40,10 +40,13 @@ fi
 alias please='sudo '
 
 # Rails stuff
-alias rtest='bundle exec bin/rspec spec'
-alias rconsole='bundle exec bin/rails c'
-alias rserver='bundle exec bin/rails s'
-alias rrake='bundle exec bin/rake'
+alias rtest='bundle exec rspec spec'
+alias rconsole='bundle exec rails c'
+alias rserver='bundle exec rails s'
+alias rrake='bundle exec rake'
+
+# LSU stuff
+alias sshproglang='ssh cs410127@classes.csc.lsu.edu'
 
 # chruby
 source /usr/local/share/chruby/chruby.sh
