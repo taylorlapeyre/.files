@@ -65,8 +65,26 @@ function install_brews() {
     "Python is probably out of date."
 
   o "chruby ruby-install" \
-    "It's generally a bad idea to use the system ruby. \n" \
-    "chruby is a good way to manage ruby."
+    "It's generally a bad idea to use the system ruby. " \
+    "chruby is a good way to manage it instead."
+  
+  o "leiningen" \
+    "Leiningen is the easiest way to use Clojure."
+
+  o "tinyscheme" \
+    "TinyScheme is a really really small Scheme interpreter."
+
+  o "mysql" \
+    "MySQL is the database that you know and love."
+
+  o "postgresql" \
+    "PostgreSQL is the database that you'd probably want to use."
+
+  o "redis" \
+    "Redis is an advanced key-value cache and store."
+
+  o "mongodb" \
+    "MongoDB is a document database powered by JavaScript."
 
   o "stow" \
     "GNU Stow is a useful utility for installing dotfiles."
@@ -92,9 +110,6 @@ function install_brews() {
     o "google-chrome" \
       "Google Chrome is a popular and modern web browser."
 
-    o "screenhero" \
-      "Screenhero is screen sharing made for remote developers"
-
     o "virtualbox vagrant" \
       "Vagrant is a tool for building and distributing working environments."
 
@@ -112,29 +127,16 @@ function install_brews() {
   fi
 }
 
-
-function configure_settings() {
-  echo "- Do you want to disable the sound effects on boot? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    sudo nvram SystemAudioVolume=" "
-  fi
-
-  echo
-  echo "- Do you want to only use UTF-8 in Terminal.app? y/n"
-  read RESPONSE
-  if [[ "$RESPONSE" == "y" ]]; then
-    defaults write com.apple.terminal StringEncodings -array 4
-  fi
-}
-
-
 hash brew &> /dev/null
 if [ $? -eq 0 ]; then
   install_brews
-  configure_settings
-  echo
-  echo "All applications have been installed. See you around!"
+  if [[ $? -eq 0 ]]; then
+    echo
+    echo "All applications have been installed. See you around!"
+  else
+    echo
+    echo "Looks like something went wrong!"
+  fi
 else
   install_brew
 fi

@@ -8,6 +8,7 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 export TERM='xterm-color'
 export EDITOR='vi'
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # History is good.
 export HISTSIZE=10000
@@ -47,11 +48,12 @@ alias rrake='bundle exec rake'
 
 # LSU stuff
 alias sshproglang='ssh cs410127@classes.csc.lsu.edu'
+alias sshdatabase='ssh cs440232@classes.csc.lsu.edu'
 
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.1.2
+chruby 2.1.3
 
 function todo() {
 	touch ~/Desktop/"$*"
