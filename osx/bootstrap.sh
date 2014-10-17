@@ -52,6 +52,9 @@ function install_brews() {
   o "libtool libxslt libksba openssl libyaml" \
     "There are some basic C libraries for development that I think you should have."
 
+  o "bash" \
+    "You might also want the latest version of Bash."
+
   o "git" \
     "Git is a distributed version control system."
 
@@ -124,6 +127,20 @@ function install_brews() {
 
     o "slack" \
       "Slack is a real-time team communication system."
+
+    echo
+    echo "This script can install fonts, such as Inconsolata."
+    echo "- Do you want to install fonts? y/n"
+    read RESPONSE
+    if [[ "$RESPONSE" == "y" ]]; then
+      brew tap caskroom/fonts
+
+      o "font-inconsolata-dz" \
+        "Inconsolata DZ is an improved version of the acclaimed Inconsolata."
+
+      o "font-input" \
+        "Input is a type family aimed at making code a pleasure to read."
+    fi
   fi
 }
 
