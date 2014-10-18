@@ -8,7 +8,6 @@ export LSCOLORS="ExGxBxDxCxEgEdxbxgxcxd"
 export GREP_OPTIONS="--color"
 export TERM='xterm-color'
 export EDITOR='vi'
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
 # History is good.
 export HISTSIZE=10000
