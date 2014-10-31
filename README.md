@@ -3,7 +3,7 @@
 I use [Cider](https://github.com/msanders/cider) for installing my things. Feel free to use that as well:
 
 ``` bash
-$ git clone https://github.com/taylorlapeyre/.files ~/.cider
+$ ln -s ~/.files ~/.cider
 $ pip install cider
 $ cider restore
 ```
