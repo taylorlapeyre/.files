@@ -1,11 +1,6 @@
 {
   "formulas": [
-    "brew-cask",
-    "libtool",
-    "libxslt",
-    "libksba",
     "openssl",
-    "libyaml",
     "bash",
     "git",
     "vim",
@@ -17,7 +12,8 @@
     "ruby-install",
     "leiningen",
     "mysql",
-    "redis"
+    "redis",
+    "brew-cask"
   ],
   "casks": [
     "atom",
