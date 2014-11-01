@@ -116,9 +116,6 @@ function install_brews() {
     o "virtualbox vagrant" \
       "Vagrant is a tool for building and distributing working environments."
 
-    o "silverlight" \
-      "Silverlight is an awful browser plug-in required for watching Netflix."
-
     o "rdio" \
       "Rdio is an ad-free music subscription service."
 
@@ -127,6 +124,9 @@ function install_brews() {
 
     o "slack" \
       "Slack is a real-time team communication system."
+
+    o "java" \
+      "Java is the standard JVM programming language."
 
     echo
     echo "This script can install fonts, such as Inconsolata."
