@@ -1,0 +1,42 @@
+{
+  "formulas": [
+    "openssl",
+    "bash",
+    "git",
+    "vim",
+    "httpie",
+    "heroku-toolbelt",
+    "node",
+    "python",
+    "chruby",
+    "ruby-install",
+    "leiningen",
+    "mysql",
+    "redis",
+    "brew-cask"
+  ],
+  "casks": [
+    "atom",
+    "emacs",
+    "dropbox",
+    "google-chrome",
+    "rdio",
+    "skype",
+    "slack",
+    "font-input",
+    "java"
+  ],
+  "taps": [
+    "caskroom/cask",
+    "caskroom/fonts"
+  ],
+  "symlinks": {
+    "bash/.*": "~",
+    "git/.*": "~",
+    "vim/.*": "~"
+  },
+  "after-scripts": [
+    "heroku login",
+    "open osx/taylorlapeyre.terminal"
+  ]
+}
