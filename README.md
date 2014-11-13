@@ -1,4 +1,10 @@
-#### This is my default configuration for unix systems.
+![.files](http://i.imgur.com/7nrjEhh.png)
+
+# .files
+
+This is my default configuration for unix systems.
+
+### Installation
 
 I use [Cider](https://github.com/msanders/cider) for installing my things. Feel free to use that as well:
 
@@ -9,12 +15,6 @@ $ cider restore
 ```
 
 A firm understanding of the Unix toolchain is recommended before putting them onto your system.
-
-If you asked me,
-
-> Taylor, what are your _favorite tools ever_?
-
-I'd probably recommend using [Atom][atom] as your primary editor, [Google Chrome][chrome] as your browser, and [Bash][bash] as your shell.
 
 [bash]: http://www.gnu.org/software/bash/
 [atom]: http://atom.io
