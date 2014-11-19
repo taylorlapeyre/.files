@@ -1,5 +1,3 @@
-![.files](http://i.imgur.com/7nrjEhh.png)
-
 # .files
 
 This is my default configuration for unix systems.
