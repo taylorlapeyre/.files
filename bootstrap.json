@@ -17,7 +17,6 @@
   ],
   "casks": [
     "atom",
-    "emacs",
     "dropbox",
     "google-chrome",
     "rdio",
