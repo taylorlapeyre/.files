@@ -1,15 +1,13 @@
 filetype off
 
 " Vundle setup
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-" Plugins
-Bundle 'kien/ctrlp.vim'
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'tpope/vim-rails'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'tpope/vim-rails'
+call vundle#end()
 
 syntax enable
 filetype plugin indent on
@@ -17,6 +15,7 @@ filetype plugin indent on
 let g:vim_markdown_folding_disabled=1
 let mapleader=","
 inoremap jk <ESC>
+inoremap kj <ESC>
 
 " I like seeing numbers
 set nu
@@ -24,8 +23,14 @@ set rnu
 
 " 256 colors, using DAS's wonderful GRB color scheme
 set t_Co=256
-color grb256
-set background=dark
+if has('gui_running')
+  colorscheme solarized
+  set background=dark
+else
+  colorscheme grb256
+  set background=dark
+endif
+
 
 " Spaces, not tabs.
 set expandtab
@@ -59,6 +64,25 @@ function! InsertTabWrapper()
 endfunction
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
+
+" Run a given vim command on the results of fuzzy selecting from a given shell
+" command. See usage below.
+function! SelectaCommand(choice_command, selecta_args, vim_command)
+  try
+    let selection = system(a:choice_command . " | selecta " . a:selecta_args)
+  catch /Vim:Interrupt/
+    " Swallow the ^C so that the redraw below happens; otherwise there will be
+    " leftovers from selecta on the screen
+    redraw!
+    return
+  endtry
+  redraw!
+  exec a:vim_command . " " . selection
+endfunction
+
+" Find all files in all non-dot directories starting in the working directory.
+" Fuzzy select one of those. Open the selected file with :e.
+nnoremap <leader>f :call SelectaCommand("find * -type f", "", ":e")<cr>
 
 " Because that's for cheaters
 map <Left> <Nop>

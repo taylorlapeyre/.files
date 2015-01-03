@@ -5,12 +5,13 @@
     "git",
     "vim",
     "httpie",
+    "selecta",
     "heroku-toolbelt",
     "node",
     "python",
+    "leiningen",
     "chruby",
     "ruby-install",
-    "leiningen",
     "mysql",
     "redis",
     "brew-cask"
@@ -20,7 +21,6 @@
     "dropbox",
     "google-chrome",
     "rdio",
-    "skype",
     "slack",
     "font-input",
     "java"
