@@ -12,3 +12,7 @@
 6. Install vim plugins: `:BundleInstall`
 
 Go.
+
+
+[gssh]: https://github.com/settings/ssh
+[hssh]: https://dashboard.heroku.com/account
