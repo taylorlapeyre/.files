@@ -1,6 +1,6 @@
 # .files
 
-This is my default configuration for unix systems. If you think you might want to use these, I suggest reading the files and taking ideas instead of copying them directly.
+This is my command line environment. If you think you might want to use it, I suggest reading the files and taking ideas rather than copying them directly.
 
 ### Philosophy
 
