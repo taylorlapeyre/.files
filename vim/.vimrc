@@ -31,7 +31,6 @@ else
   set background=dark
 endif
 
-
 " Spaces, not tabs.
 set expandtab
 set tabstop=2
