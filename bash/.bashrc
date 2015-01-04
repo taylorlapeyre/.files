@@ -1,5 +1,5 @@
 export PATH=$HOME/bin:$PATH
-export PS1="\u: \[$(tput setaf 6)\]\w\[$(tput sgr0)\] $ "
+export PS1="\u: \[$(tput setaf 4)\]\w\[$(tput sgr0)\] $ "
 
 # Show three directory levels deep before making the path more concise
 export PROMPT_DIRTRIM=3
