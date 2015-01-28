@@ -5,6 +5,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'mattn/emmet-vim'
+Plugin 'rking/ag.vim'
 call vundle#end()
 
 " Syntax, Filetype, Colorscheme

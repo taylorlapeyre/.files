@@ -6,6 +6,7 @@
     "vim",
     "httpie",
     "selecta",
+    "the_silver_searcher",
     "heroku-toolbelt",
     "node",
     "python",
@@ -20,9 +21,8 @@
     "atom",
     "dropbox",
     "google-chrome",
-    "rdio",
+    "spotify",
     "slack",
-    "font-input",
     "java"
   ],
   "taps": [
