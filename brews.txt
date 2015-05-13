@@ -1,0 +1,15 @@
+openssl
+bash
+git
+vim
+httpie
+selecta
+the_silver_searcher
+heroku-toolbelt
+node
+python
+leiningen
+chruby
+ruby-install
+mysql
+redis

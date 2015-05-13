@@ -70,6 +70,8 @@ endfunction
 " Find all files in all non-dot directories in the working directory.
 " Fuzzy select one of those. Open the selected file with :e.
 nnoremap <leader>f :call SelectaCommand("find * -type f", "", ":e")<cr>
+nnoremap <leader>h :call SelectaCommand("find * -type f", "", ":split")<cr>
+nnoremap <leader>v :call SelectaCommand("find * -type f", "", ":vsplit")<cr>
 
 " To help practice
 map <Left> <Nop>

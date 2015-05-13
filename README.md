@@ -10,10 +10,20 @@ I should be able to clone this directory and be productive in less than 10 minut
 
 ### Installation
 
-I use [Cider](https://github.com/msanders/cider).
-
 ``` bash
-$ ln -s ~/.files ~/.cider
-$ pip install cider
-$ cider restore
+$ # Install Homebrew..
+$ # Clone this repository into $HOME:
+$ git clone --recursive git@github.com:taylorlapeyre/.files.git $HOME
+
+$ # Install Brews:
+$ brew install $(cat ~/.files/brews.txt | tr "\\n" " ")
+
+$ # Install Casks:
+$ brew tap caskroom/cask
+$ brew cask install $(cat ~/.files/casks.txt | tr "\\n" " ")
+
+$ # Link dotfiles:
+$ ln -s ~/.files/vim/* ~
+$ ln -s ~/.files/bash/* ~
+$ ln -s ~/.files/git/* ~
 ```
