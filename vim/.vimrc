@@ -5,7 +5,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'mattn/emmet-vim'
-Plugin 'rking/ag.vim'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 " Syntax, Filetype, Colorscheme
@@ -13,10 +13,9 @@ syntax enable
 filetype plugin indent on
 
 if has('gui_running')
-  colorscheme solarized
   set background=dark
 else
-  colorscheme grb256
+  colorscheme solarized
   set background=dark
 endif
 

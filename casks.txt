@@ -3,4 +3,3 @@ dropbox
 google-chrome
 spotify
 slack
-java
