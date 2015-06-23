@@ -8,29 +8,47 @@ call vundle#begin()
   Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
-" Syntax, Filetype, Colorscheme
+" Automatically load colorschemes, file plugins, file indentation,
+" and syntax for the given file.
 syntax enable
 filetype plugin indent on
 
 if has('gui_running')
-  set background=dark
+  " Empty for now, but place MacVim settings here.
 else
   colorscheme solarized
   set background=dark
 endif
 
-" General Settings, Indentation
+" Use spacebar for leader
 let mapleader=" "
-set expandtab smarttab
+
+" Use 2 spaces instead of \t
+set expandtab
 set tabstop=2 shiftwidth=2
+
+" Copy indentation from current line when inserting a \n
 set autoindent
+
+" Instead of backspace deleting one space at a time, delete by
+" levels of indentation
+set smarttab
+
+" Indent lines that wrap around the screen by 4 spaces on the next line
 set breakindent breakindentopt=shift:4,sbr
+
+" Enable line numbers, relative to the current line
 set number relativenumber
 set backspace=indent,eol,start
+
+" Show me what commands I'm typing
 set showcmd
 
-" Nicer Searching
-set showmatch matchtime=2
+" Show matching brackets
+set showmatch
+
+" Highlight matching terms as I seatch, and ignore case unless
+" I explicitly have uppercase characters
 set incsearch
 set ignorecase smartcase
 
@@ -52,7 +70,7 @@ inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 " Run a given vim command on the results of fuzzy selecting from
-" a given shell command. See usage below.
+" a given shell command. See usage below. Credit: Gary Bernhardt
 function! SelectaCommand(choice_command, selecta_args, vim_command)
   try
     let selection = system(a:choice_command . " | selecta " . a:selecta_args)
@@ -72,13 +90,7 @@ nnoremap <leader>f :call SelectaCommand("find * -type f", "", ":e")<cr>
 nnoremap <leader>h :call SelectaCommand("find * -type f", "", ":split")<cr>
 nnoremap <leader>v :call SelectaCommand("find * -type f", "", ":vsplit")<cr>
 
-" To help practice
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
-
-" Switch between splits
+" Switch between splits by just holding ctrl
 nnoremap <silent> <C-h> <C-w><C-h>
 nnoremap <silent> <C-j> <C-w><C-j>
 nnoremap <silent> <C-k> <C-w><C-k>
