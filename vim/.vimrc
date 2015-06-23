@@ -1,11 +1,11 @@
 " Plugins
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'mattn/emmet-vim'
-Plugin 'rust-lang/rust.vim'
+  Plugin 'gmarik/Vundle.vim'
+  Plugin 'kchmck/vim-coffee-script'
+  Plugin 'mustache/vim-mustache-handlebars'
+  Plugin 'mattn/emmet-vim'
+  Plugin 'rust-lang/rust.vim'
 call vundle#end()
 
 " Syntax, Filetype, Colorscheme
@@ -31,7 +31,7 @@ set showcmd
 
 " Nicer Searching
 set showmatch matchtime=2
-set incsearch hlsearch
+set incsearch
 set ignorecase smartcase
 
 " Nicer Scrolling
