@@ -1,5 +1,4 @@
 atom
-dropbox
 google-chrome
 spotify
 slack

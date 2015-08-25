@@ -1,4 +1,3 @@
-openssl
 bash
 git
 vim
