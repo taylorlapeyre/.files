@@ -21,19 +21,19 @@ I'm going to assume you are doing this on a **new OSX install.**
   ```
 4. Go ahead and add this key to your **GitHub profile**.
 5. You'll need **Homebrew**. Go to their website to install it - I think http://brew.sh
-6. Clone this repository (recursively) into your `$HOME` and check it out. Pretty cozy in here.
-7. Install all the brews that are listed. You can use some fancy unix to do it:
+6. **Clone this repository** (recursively) into your `$HOME` and check it out. Pretty cozy in here.
+7. **Install all the brews** that are listed. You can use some fancy unix to do it:
 
   ```bash
   brew install $(cat ~/.files/brews.txt | tr "\\n" " ")
   ```
-8. Install brew cask and install the applications listed here:
+8. Install **brew cask** and install the applications listed here:
 
   ```bash
   $ brew install caskroom/cask/brew-cask
   $ brew cask install $(cat ~/.files/casks.txt | tr "\\n" " ")
   ```
-9. I'd tell you that there's some fancy way to link every dotfile here at once, but there really isn't a good way. Do it by hand:
+9. I'd tell you that there's some fancy way to **link every dotfile** here at once, but there really isn't a good way. Do it by hand:
 
   ```bash
   cd ~
@@ -48,26 +48,6 @@ I'm going to assume you are doing this on a **new OSX install.**
   # git
   ln -s .files/git/.gitconfig .
   ```
-10. Open the solarized.terminal file in /osx.
+10. Open the **solarized.terminal** file in /osx.
 
 You're good to go! You might want to think about installing ruby with ruby-install.
-
-
-
-``` bash
-$ # Install Homebrew..
-$ # Clone this repository into $HOME:
-$ git clone --recursive git@github.com:taylorlapeyre/.files.git $HOME
-
-$ # Install Brews:
-$ brew install $(cat ~/.files/brews.txt | tr "\\n" " ")
-
-$ # Install Casks:
-$ brew tap caskroom/cask
-$ brew cask install $(cat ~/.files/casks.txt | tr "\\n" " ")
-
-$ # Link dotfiles:
-$ ln -s ~/.files/vim/* ~
-$ ln -s ~/.files/bash/* ~
-$ ln -s ~/.files/git/* ~
-```
