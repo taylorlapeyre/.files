@@ -11,7 +11,7 @@
 	co  = checkout
 	cm  = "commit -m"
 	st  = "status -sb"
-	br  = "branch -r"
+	br  = "! git co $(git branch | selecta)"
 	aa  = "add --all :/"
 	rh  = "reset --hard"
 	ap  = "add -p"

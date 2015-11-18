@@ -6,6 +6,7 @@ call vundle#begin()
   Plugin 'mustache/vim-mustache-handlebars'
   Plugin 'mattn/emmet-vim'
   Plugin 'rust-lang/rust.vim'
+  Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 " Automatically load colorschemes, file plugins, file indentation,
@@ -16,8 +17,7 @@ filetype plugin indent on
 if has('gui_running')
   " Empty for now, but place MacVim settings here.
 else
-  colorscheme solarized
-  set background=dark
+  color grb256
 endif
 
 " Use spacebar for leader
@@ -61,12 +61,12 @@ set sidescroll=1
 function! InsertTabWrapper()
   let col = col('.') - 1
   if !col || getline('.')[col - 1] !~ '\k'
-	return "\<tab>"
+    return "\<tab>"
   else
-	return "\<c-p>"
+    return "\<c-p>"
   endif
 endfunction
-inoremap <tab> <c-r>=InsertTabWrapper()<cr>
+inoremap <tab> <cr>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 " Run a given vim command on the results of fuzzy selecting from
