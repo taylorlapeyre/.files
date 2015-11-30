@@ -17,7 +17,9 @@ filetype plugin indent on
 if has('gui_running')
   " Empty for now, but place MacVim settings here.
 else
-  color grb256
+  set t_Co=256
+  colorscheme smyck
+  set background=dark
 endif
 
 " Use spacebar for leader
