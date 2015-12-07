@@ -4,9 +4,6 @@ call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
   Plugin 'kchmck/vim-coffee-script'
   Plugin 'mustache/vim-mustache-handlebars'
-  Plugin 'mattn/emmet-vim'
-  Plugin 'rust-lang/rust.vim'
-  Plugin 'scrooloose/nerdtree'
 call vundle#end()
 
 " Automatically load colorschemes, file plugins, file indentation,
@@ -14,13 +11,10 @@ call vundle#end()
 syntax enable
 filetype plugin indent on
 
-if has('gui_running')
-  " Empty for now, but place MacVim settings here.
-else
-  set t_Co=256
-  colorscheme smyck
-  set background=dark
-endif
+" Colors
+set t_Co=256
+colorscheme smyck
+set background=dark
 
 " Use spacebar for leader
 let mapleader=" "
@@ -46,7 +40,7 @@ set backspace=indent,eol,start
 " Show me what commands I'm typing
 set showcmd
 
-" Show matching brackets
+" Highlight matching brackets
 set showmatch
 
 " Highlight matching terms as I seatch, and ignore case unless
@@ -68,7 +62,7 @@ function! InsertTabWrapper()
     return "\<c-p>"
   endif
 endfunction
-inoremap <tab> <cr>=InsertTabWrapper()<cr>
+inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
 " Run a given vim command on the results of fuzzy selecting from
