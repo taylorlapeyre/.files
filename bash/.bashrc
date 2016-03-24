@@ -35,7 +35,7 @@ alias be='bundle exec'
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby 2.2.3
+chruby 2.3.0
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
