@@ -32,6 +32,10 @@ fi
 # ruby
 alias be='bundle exec'
 
+kill_all_servers() {
+  lsof -wni tcp:3000 | cut -f5 -d " " | xargs kill
+}
+
 # chruby
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh

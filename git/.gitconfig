@@ -7,9 +7,10 @@
 [user]
 	name = Taylor Lapeyre
 	email = taylorlapeyre@gmail.com
+	signingkey = 2E9FCF60
 [alias]
 	co  = checkout
-	cm  = "commit -m"
+	cm  = "commit -S -m"
 	st  = "status -sb"
 	br  = "! git co $(git branch | selecta)"
 	aa  = "add --all :/"

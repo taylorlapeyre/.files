@@ -1,3 +1,4 @@
+hyperterm
 atom
 google-chrome
 spotify
