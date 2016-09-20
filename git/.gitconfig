@@ -10,7 +10,7 @@
 	signingkey = 2E9FCF60
 [alias]
 	co  = checkout
-	cm  = "commit -S -m"
+	cm  = "commit -m"
 	st  = "status -sb"
 	br  = "! git co $(git branch | selecta)"
 	aa  = "add --all :/"
@@ -18,6 +18,7 @@
 	ap  = "add -p"
 	ss  = "stash save"
 	nuke = "!git clean -fd && git reset --hard"
+  recent = "!git for-each-ref --count=35 --sort=-committerdate refs/heads/ --format='%(refname:short)!%(authorname)!%(committerdate:short)' | rs -zc! 35 3"
 [format]
 	pretty = oneline
 [color]

@@ -1,11 +1,9 @@
 bash
 git
 vim
-httpie
 selecta
 heroku-toolbelt
 node
-leiningen
 chruby
 ruby-install
 mysql
