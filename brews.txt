@@ -1,6 +1,4 @@
 bash
 git
 vim
-selecta
-chruby
-ruby-install
+asdf
