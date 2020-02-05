@@ -1,5 +1,0 @@
-hyperterm
-atom
-google-chrome
-spotify
-slack
