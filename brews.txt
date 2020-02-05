@@ -2,9 +2,5 @@ bash
 git
 vim
 selecta
-heroku-toolbelt
-node
 chruby
 ruby-install
-mysql
-redis

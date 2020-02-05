@@ -13,12 +13,13 @@
 	cm  = "commit -m"
 	st  = "status -sb"
 	br  = "! git co $(git branch | selecta)"
-	aa  = "add --all :/"
+	aa  = "add ."
 	rh  = "reset --hard"
 	ap  = "add -p"
 	ss  = "stash save"
 	nuke = "!git clean -fd && git reset --hard"
   recent = "!git for-each-ref --count=35 --sort=-committerdate refs/heads/ --format='%(refname:short)!%(authorname)!%(committerdate:short)' | rs -zc! 35 3"
+  branches = "!sh -c \"git checkout $(git for-each-ref --sort='-authordate:iso8601' --format=' %(authordate:relative)%09%(refname:short)' refs/heads | selecta | cut -f2)\""
 [format]
 	pretty = oneline
 [color]
@@ -28,5 +29,11 @@
 	rebase = true
 [push]
 	default = simple
+	followTags = true
 [branch]
 	autosetupmerge = true
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpuser = taylorlapeyre@gmail.com
+	smtpencryption = tls
+	smtpserverport = 587
