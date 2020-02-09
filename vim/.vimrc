@@ -1,10 +1,3 @@
-" Plugins
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-  Plugin 'gmarik/Vundle.vim'
-  Plugin 'kchmck/vim-coffee-script'
-  Plugin 'mustache/vim-mustache-handlebars'
-call vundle#end()
 
 " Automatically load colorschemes, file plugins, file indentation,
 " and syntax for the given file.
@@ -13,7 +6,7 @@ filetype plugin indent on
 
 " Colors
 set t_Co=256
-colorscheme smyck
+colorscheme solarized
 set background=dark
 
 " Use spacebar for leader
@@ -82,7 +75,7 @@ endfunction
 
 " Find all files in all non-dot directories in the working directory.
 " Fuzzy select one of those. Open the selected file with :e.
-let fileCommand = 'find * -type f | grep -v "\(node_modules\|vendor\|tmp\|git\|public\)"'
+let fileCommand = 'find * -type f | grep -v "\(node_modules\|coverage\|fixtures\|build\|bin\|vendor\|tmp\|git\|public\)"'
 nnoremap <leader>f :call SelectaCommand(fileCommand, "", ":e")<cr>
 nnoremap <leader>h :call SelectaCommand(fileCommand, "", ":split")<cr>
 nnoremap <leader>v :call SelectaCommand(fileCommand, "", ":vsplit")<cr>
