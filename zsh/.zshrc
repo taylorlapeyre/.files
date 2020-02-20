@@ -1,4 +1,4 @@
-export PS1=$'\e[0;95m%~\e[0m \$ '
+export PS1=$'%~ \$ '
 export PATH=$HOME/bin:$PATH
 
 export HISTSIZE=1000

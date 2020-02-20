@@ -7,7 +7,7 @@ filetype plugin indent on
 " Colors
 set t_Co=256
 colorscheme solarized
-set background=dark
+set background=light
 
 " Use spacebar for leader
 let mapleader=" "

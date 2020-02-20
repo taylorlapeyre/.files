@@ -1,4 +1,5 @@
-bash
+zsh
 git
 vim
 asdf
+yarn
