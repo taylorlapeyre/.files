@@ -4,13 +4,29 @@
 syntax enable
 filetype plugin indent on
 
+call plug#begin('~/.vim/plugged')
+
+Plug 'dense-analysis/ale'
+Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'mileszs/ack.vim'
+Plug 'vimwiki/vimwiki'
+Plug 'preservim/nerdtree'
+Plug 'jonathanfilip/vim-lucius'
+
+call plug#end()
+
 " Colors
 set t_Co=256
-colorscheme solarized
-set background=light
+color lucius
+LuciusDarkHighContrast
+set background=dark
 
 " Use spacebar for leader
 let mapleader=" "
+
+nmap <silent> <leader-k> <Plug>(ale_previous_wrap)
+nmap <silent> <leader-j> <Plug>(ale_next_wrap)
+
 
 " Use 2 spaces instead of \t
 set expandtab
@@ -27,7 +43,7 @@ set smarttab
 set breakindent breakindentopt=shift:4,sbr
 
 " Enable line numbers, relative to the current line
-set number relativenumber
+" set number relativenumber
 set backspace=indent,eol,start
 
 " Show me what commands I'm typing
@@ -45,6 +61,8 @@ set ignorecase smartcase
 set scrolloff=8
 set sidescrolloff=15
 set sidescroll=1
+
+nnoremap gp :silent %!prettier --stdin-filepath % --single-quote<CR>
 
 " Smart tab completion. Credit: Gary Bernhardt
 function! InsertTabWrapper()
@@ -85,3 +103,7 @@ nnoremap <silent> <C-h> <C-w><C-h>
 nnoremap <silent> <C-j> <C-w><C-j>
 nnoremap <silent> <C-k> <C-w><C-k>
 nnoremap <silent> <C-l> <C-w><C-l>
+
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                      \ 'syntax': 'markdown', 'ext': '.md'}]
+
